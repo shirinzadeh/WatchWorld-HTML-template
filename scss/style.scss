@@ -1025,6 +1025,47 @@ h1, h2, h3, h4, h5,
 				border-color: transparent transparent transparent #fff;
 			}
 		}
+		&:hover,&:focus{
+			background: rgba($primary,.8);
+			&.left-arrow{
+				&:after{
+					border-color: transparent  rgba($primary,.8) transparent transparent;
+				}
+			}
+			&.right-arrow{
+				&:after{
+					border-color: transparent transparent transparent  rgba($primary,.8);
+
+				}
+			}
+				
+			.text{
+				.star{
+					span{
+						color: $white;
+					}
+				}
+				h3{
+					a{
+						color: $black;
+					}
+				}
+				span.price{
+					color: $white;
+				}
+				// span.per{
+				// 	font-size: 14px;
+				// 	color: lighten($black,0%);
+				// }
+				.btn-custom{
+					display: inline-block;
+					color: $black;
+					border: 1px solid $black;
+					background: $white;
+	
+				}
+			}
+		}
 	}
 	.text{
 		width: 100%;
@@ -1057,48 +1098,7 @@ h1, h2, h3, h4, h5,
 			border: 2px solid rgba(0,0,0,.1);
 		}
 	}
-	&:hover,&:focus{
-		background: rgba($primary,.8);
-		.half{
-			&.left-arrow{
-				&:after{
-					border-color: transparent  rgba($primary,.8) transparent transparent;
-				}
-			}
-			&.right-arrow{
-				&:after{
-					border-color: transparent transparent transparent  rgba($primary,.8);
-
-				}
-			}
-		}
-		.text{
-			.star{
-				span{
-					color: $white;
-				}
-			}
-			h3{
-				a{
-					color: $black;
-				}
-			}
-			span.price{
-				color: $white;
-			}
-			// span.per{
-			// 	font-size: 14px;
-			// 	color: lighten($black,0%);
-			// }
-			.btn-custom{
-				display: inline-block;
-				color: $black;
-				border: 1px solid $black;
-				background: $white;
-
-			}
-		}
-	}
+	
 }
 
 //ROOMS

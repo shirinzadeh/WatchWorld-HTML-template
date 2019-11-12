@@ -8847,6 +8847,23 @@ h1, h2, h3, h4, h5,
       border-style: solid;
       border-width: 12px 0 12px 15px;
       border-color: transparent transparent transparent #fff; }
+    .room-wrap .half:hover, .room-wrap .half:focus {
+      background: rgba(255, 53, 53, 0.8); }
+      .room-wrap .half:hover.left-arrow:after, .room-wrap .half:focus.left-arrow:after {
+        border-color: transparent rgba(255, 53, 53, 0.8) transparent transparent; }
+      .room-wrap .half:hover.right-arrow:after, .room-wrap .half:focus.right-arrow:after {
+        border-color: transparent transparent transparent rgba(255, 53, 53, 0.8); }
+      .room-wrap .half:hover .text .star span, .room-wrap .half:focus .text .star span {
+        color: #fff; }
+      .room-wrap .half:hover .text h3 a, .room-wrap .half:focus .text h3 a {
+        color: #000000; }
+      .room-wrap .half:hover .text span.price, .room-wrap .half:focus .text span.price {
+        color: #fff; }
+      .room-wrap .half:hover .text .btn-custom, .room-wrap .half:focus .text .btn-custom {
+        display: inline-block;
+        color: #000000;
+        border: 1px solid #000000;
+        background: #fff; }
   .room-wrap .text {
     width: 100%; }
     .room-wrap .text h2 {
@@ -8867,23 +8884,6 @@ h1, h2, h3, h4, h5,
       display: inline-block;
       color: #000000;
       border: 2px solid rgba(0, 0, 0, 0.1); }
-  .room-wrap:hover, .room-wrap:focus {
-    background: rgba(255, 53, 53, 0.8); }
-    .room-wrap:hover .half.left-arrow:after, .room-wrap:focus .half.left-arrow:after {
-      border-color: transparent rgba(255, 53, 53, 0.8) transparent transparent; }
-    .room-wrap:hover .half.right-arrow:after, .room-wrap:focus .half.right-arrow:after {
-      border-color: transparent transparent transparent rgba(255, 53, 53, 0.8); }
-    .room-wrap:hover .text .star span, .room-wrap:focus .text .star span {
-      color: #fff; }
-    .room-wrap:hover .text h3 a, .room-wrap:focus .text h3 a {
-      color: #000000; }
-    .room-wrap:hover .text span.price, .room-wrap:focus .text span.price {
-      color: #fff; }
-    .room-wrap:hover .text .btn-custom, .room-wrap:focus .text .btn-custom {
-      display: inline-block;
-      color: #000000;
-      border: 1px solid #000000;
-      background: #fff; }
 
 .room {
   display: block;
