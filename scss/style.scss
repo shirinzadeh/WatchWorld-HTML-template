@@ -929,28 +929,17 @@ h1, h2, h3, h4, h5,
 	}
 	&.active{
 		background: $darken;
-		.icon{
-			span{
-				color: $white;
-			}
-		}
 		.media-body{
 			h3{
+				color: $white;
+			}
+			a{
 				color: $white;
 			}
 		}
 	}
 	&:hover{
 		box-shadow: 0 0 10px 0 $black;
-		// background: $primary;
-		// .icon{
-		// 	span{
-		// 		color: $white;
-		// 	}
-		// }
-		// h3{
-		// 	color: $white;
-		// }
 	}
 }
 
@@ -1058,10 +1047,10 @@ h1, h2, h3, h4, h5,
 			color: $primary;
 			position: relative;
 		}
-		span.per{
-			font-size: 14px;
-			color: lighten($black,40%);
-		}
+		// span.per{
+		// 	font-size: 14px;
+		// 	color: lighten($black,40%);
+		// }
 		.btn-custom{
 			display: inline-block;
 			color: $black;
@@ -1097,15 +1086,16 @@ h1, h2, h3, h4, h5,
 			span.price{
 				color: $white;
 			}
-			span.per{
-				font-size: 14px;
-				color: lighten($black,0%);
-			}
+			// span.per{
+			// 	font-size: 14px;
+			// 	color: lighten($black,0%);
+			// }
 			.btn-custom{
 				display: inline-block;
 				color: $black;
-				border: 2px solid rgba(255,255,255,1);
+				border: 1px solid $black;
 				background: $white;
+
 			}
 		}
 	}

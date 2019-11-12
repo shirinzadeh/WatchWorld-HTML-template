@@ -8772,9 +8772,9 @@ h1, h2, h3, h4, h5,
     font-size: 20px; }
   .services.active {
     background: #312b30; }
-    .services.active .icon span {
-      color: #fff; }
     .services.active .media-body h3 {
+      color: #fff; }
+    .services.active .media-body a {
       color: #fff; }
   .services:hover {
     -webkit-box-shadow: 0 0 10px 0 #000000;
@@ -8863,9 +8863,6 @@ h1, h2, h3, h4, h5,
       font-size: 26px;
       color: #ff3535;
       position: relative; }
-    .room-wrap .text span.per {
-      font-size: 14px;
-      color: #666666; }
     .room-wrap .text .btn-custom {
       display: inline-block;
       color: #000000;
@@ -8882,13 +8879,10 @@ h1, h2, h3, h4, h5,
       color: #000000; }
     .room-wrap:hover .text span.price, .room-wrap:focus .text span.price {
       color: #fff; }
-    .room-wrap:hover .text span.per, .room-wrap:focus .text span.per {
-      font-size: 14px;
-      color: black; }
     .room-wrap:hover .text .btn-custom, .room-wrap:focus .text .btn-custom {
       display: inline-block;
       color: #000000;
-      border: 2px solid white;
+      border: 1px solid #000000;
       background: #fff; }
 
 .room {
