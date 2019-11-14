@@ -4815,9 +4815,9 @@ a.close.disabled {
   border-bottom-right-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem; }
   .modal-footer > :not(:first-child) {
-    margin-left: .25rem; }
+    margin-left: 0.25rem; }
   .modal-footer > :not(:last-child) {
-    margin-right: .25rem; }
+    margin-right: 0.25rem; }
 
 .modal-scrollbar-measure {
   position: absolute;
@@ -8321,6 +8321,10 @@ h1, h2, h3, h4, h5,
         background: #fff !important;
         color: #000000; }
 
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: auto;
+  touch-action: auto; }
+
 .owl-carousel {
   position: relative; }
   .owl-carousel .owl-item {
@@ -8770,6 +8774,8 @@ h1, h2, h3, h4, h5,
       color: #ff3535; }
   .services .media-body h3 {
     font-size: 20px; }
+  .services .media-body a:hover {
+    text-decoration: underline; }
   .services.active {
     background: #312b30; }
     .services.active .media-body h3 {
@@ -8800,7 +8806,8 @@ h1, h2, h3, h4, h5,
     font-size: 7vw;
     font-weight: 600;
     line-height: 1;
-    color: #fff; }
+    color: #fff;
+    text-shadow: 5px 5px 10px #000000; }
 
 .room-wrap {
   width: 100%;
@@ -10071,4 +10078,86 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+.modal-header {
+  padding: 0 !important;
+  position: relative;
+  background-color: #ff9b9b; }
+  .modal-header .close-button {
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    font-size: 30px;
+    border: 1px solid #ff3535;
+    border-radius: 50%;
+    background: #fff;
+    color: #ff3535;
+    padding: 0 1.2rem; }
+  .modal-header:hover .popup-image {
+    -webkit-transform: translateY(3rem) scale(1.2);
+            transform: translateY(3rem) scale(1.2);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease; }
+  .modal-header:hover > .popup-image-text {
+    display: none; }
+  .modal-header .popup-image {
+    width: 100%;
+    position: relative;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease; }
+  .modal-header .popup-image-text {
+    position: absolute;
+    bottom: 2rem;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 0 0 10px #fff;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease; }
+    .modal-header .popup-image-text .modal-header-heading {
+      padding: 0px; }
+    .modal-header .popup-image-text .modal-menu-price {
+      font-size: 25px;
+      background: #000000;
+      color: #fff;
+      border-radius: 1rem;
+      padding: .5rem 1.5rem; }
+
+.modal-body .modal-category-text {
+  font: 14px "Poppins", Arial, sans-serif; }
+
+.modal-body .modal-nutritions,
+.modal-body .modal-spicy,
+.modal-body .modal-ingredients {
+  font: 12px "Poppins", Arial, sans-serif; }
+
+.modal-body .spicy-level {
+  width: 100%;
+  /* Full width */
+  background-color: #ddd;
+  /* Grey background */
+  border-radius: 1rem; }
+  .modal-body .spicy-level .level {
+    width: 80%;
+    background: #b3b3b3;
+    border-radius: 1rem;
+    padding: .2rem 0; }
+
+.modal-body .row .nutritions-text {
+  font: 14px "Poppins", Arial, sans-serif; }
+
+#overlay {
+  position: fixed;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none; }
+  #overlay .active {
+    opacity: 1;
+    pointer-events: all; }
 /*# sourceMappingURL=style.css.map */

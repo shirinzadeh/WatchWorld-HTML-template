@@ -45,18 +45,18 @@
 	        <ul class="navbar-nav mx-auto">
 	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
-	          <li class="nav-item"><a href="#" class="nav-link">Testimonials</a></li>
-	          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="product.html" class="nav-link">Products</a></li>
+	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
+
     <!-- END nav -->
 		<div class="hero">
 			<div class="container-wrap d-flex justify-content-end align-items-end">
-				<a href="https://www.youtube.com/watch?v=N7aX7puFQQI" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+				<a href="#" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
 					<span class="ion-ios-play play"></span>
 				</a>
 			</div>
@@ -90,7 +90,6 @@
 	      </div>
 	    </section>
 	  </div>
-
     <!-- <section class="ftco-booking ftco-section ftco-no-pt ftco-no-pb">
     	<div class="container">
     		<div class="row">
@@ -174,7 +173,7 @@
           </div>
         </div>  
         <div class="row d-flex">
-          <div class="col-md pr-md-1 d-flex align-self-stretch ftco-animate">
+          <div class="col-md pr-md-1 d-flex align-self-stretch ftco-animate" data-toggle="modal" data-target="#modalboxCollection1">
             <div class="media block-6 services py-4 d-block text-center">
               <div class="d-flex justify-content-center">
               	<div class="icon d-flex align-items-center justify-content-center">
@@ -184,11 +183,11 @@
               </div>
               <div class="media-body">
 				<h3 class="heading mb-3 text-capitalize">rings</h3>
-				<a href=""><span>See the collection</span></a>
+				<a href="" data-toggle="modal" data-target="#modalboxCollection1"><span>See the collection</span></a>
               </div>
             </div>      
           </div>
-          <div class="col-md px-md-1 d-flex align-self-stretch ftco-animate">
+          <div class="col-md px-md-1 d-flex align-self-stretch ftco-animate" data-toggle="modal" data-target="#modalboxCollection2">
             <div class="media block-6 services active py-4 d-block text-center">
               <div class="d-flex justify-content-center">
               	<div class="icon d-flex align-items-center justify-content-center">
@@ -198,11 +197,11 @@
               </div>
               <div class="media-body">
 				<h3 class="heading mb-3 text-capitalize">necklaces</h3>
-				<a href=""><span>See the collection</span></a>
+				<a href="" data-toggle="modal" data-target="#modalboxCollection2"><span>See the collection</span></a>
               </div>
             </div>    
           </div>
-          <div class="col-md px-md-1 d-flex align-sel Searchf-stretch ftco-animate">
+          <div class="col-md px-md-1 d-flex align-sel Searchf-stretch ftco-animate" data-toggle="modal" data-target="#modalboxCollection3">
             <div class="media block-6 services py-4 d-block text-center">
               <div class="d-flex justify-content-center">
               	<div class="icon d-flex align-items-center justify-content-center">
@@ -212,11 +211,11 @@
               </div>
               <div class="media-body">
 				<h3 class="heading mb-3 text-capitalize">braceletes</h3>
-				<a href=""><span>See the collection</span></a>
+				<a href="" data-toggle="modal" data-target="#modalboxCollection3"><span>See the collection</span></a>
               </div>
             </div>      
           </div>
-          <div class="col-md px-md-1 d-flex align-self-stretch ftco-animate">
+          <div class="col-md px-md-1 d-flex align-self-stretch ftco-animate" data-toggle="modal" data-target="#modalboxCollection4">
             <div class="media block-6 services py-4 d-block text-center">
               <div class="d-flex justify-content-center">
               	<div class="icon d-flex align-items-center justify-content-center">
@@ -226,14 +225,203 @@
               </div>
               <div class="media-body">
 				<h3 class="heading mb-3 text-capitalize">earrings</h3>
-				<a href=""><span>See the collection</span></a>
+				<a href="" data-toggle="modal" data-target="#modalboxCollection4"><span>See the collection</span></a>
               </div>
             </div>      
           </div>
         </div>
       </div>
-    </section>
+	</section>
+	
+	    <!--COllection Modal 1 -->
+        <div class="modal fade modalbox" id="modalboxCollection1" tabindex="-1" role="dialog" aria-labelledby="modalboxTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <img class="popup-image" src="img/popular1.png" alt="popup-image">              
+                      <div class="popup-image-text modal-title" id="modalboxTitle">
+                        <h3 class="modal-header-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <span class="modal-menu-price">$22</span>
+                      </div>
+                      <button type="button" class=" close-button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <!-- <h1 class="modal-body-category text-uppercase d-inline-block">brunch</h1>
+                      <h6 class="modal-body-category text-uppercase d-inline-block">today specials</h6>
+                      <p class="modal-category-text font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellat debitis ipsam nostrum, magni et?</p>
+                      <hr>
+                      <p class="text-muted">450g</p>
+                      <hr>
+                      <i class="fas fa-pepper-hot d-inline-block text-muted" ></i>
+                      <h1 class="modal-spicy text-uppercase d-inline-block font-weight-bold">spicy level</h1>
+						<div class="spicy-level mb-3">
+							<div class="level text-center">4/5</div>
+						</div>
+                      <i class="fas fa-utensils d-inline-block text-muted"></i>
+                      <h1 class="modal-nutritions text-uppercase d-inline-block font-weight-bold">nutritions</h1>
+						<div class="row">
+							<div class="col">
+							<p class="text-muted nutritions-text">Calories 250kcl <br>
+								Fiber 2.0G <br>
+								Carbohydrates 4.5G <br>
+								Protein 1.7G
+							</p>
+							</div>
+							<div class="col">
+								<p class="text-muted nutritions-text">Calories 250kcl <br>
+								Fiber 2.0G <br>
+								Carbohydrates 4.5G <br>
+								</p>
+							</div>
+						</div>
+                      <hr> -->
+                      <i class="fas fa-book d-inline-block text-muted" ></i>
+                      <h1 class="modal-ingredients text-uppercase d-inline-block font-weight-bold">details</h1>
+					  <p class="modal-category-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore quasi sequi accusamus, laboriosam ullam autem dolores ratione nemo saepe hic?</p>
+					  <div class="col">
+							<p class="text-muted nutritions-text">
+								18kt White Gold 100%<br>
+								Diamond 100% <br>
+							</p>
+						</div>
+                  </div>
+                
+              </div>
+            </div>
+      </div>
 
+	  <!--COllection Modal 2 -->
+	  <div class="modal fade modalbox" id="modalboxCollection2" tabindex="-1" role="dialog" aria-labelledby="modalboxTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <img class="popup-image" src="img/popular2.png" alt="popup-image">              
+                      <div class="popup-image-text modal-title" id="modalboxTitle">
+                        <h3 class="modal-header-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <span class="modal-menu-price">$22</span>
+                      </div>
+                      <button type="button" class=" close-button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <p class="text-muted">450g</p>
+					  <hr>
+					  <p class="modal-category-text font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellat debitis ipsam nostrum, magni et?</p>
+                      <hr>
+                      <i class="fas fa-pepper-hot d-inline-block text-muted" ></i>
+                      <h1 class="modal-spicy text-uppercase d-inline-block font-weight-bold">reviews</h1>
+                      <div class="spicy-level mb-3">
+                        <div class="level text-center font-weight-bold">4/5</div>
+                      </div>
+                      <i class="fas fa-utensils d-inline-block text-muted"></i>
+                      <h1 class="modal-nutritions text-uppercase d-inline-block font-weight-bold">details</h1>
+                      <div class="row">
+                        <div class="col">
+                          <p class="text-muted nutritions-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, consectetur!
+                          </p>
+                        </div>
+                        <div class="col">
+                            <p class="text-muted nutritions-text">
+								18kt White Gold 100%<br>
+                                Diamond 100% <br>
+                            </p>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+	  </div>
+	  
+	  <!--COllection Modal 3 -->
+	  <div class="modal fade modalbox" id="modalboxCollection3" tabindex="-1" role="dialog" aria-labelledby="modalboxTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <img class="popup-image" src="img/popular3.png" alt="popup-image">              
+                      <div class="popup-image-text modal-title" id="modalboxTitle">
+                        <h3 class="modal-header-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <span class="modal-menu-price">$22</span>
+                      </div>
+                      <button type="button" class=" close-button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+						<p class="text-muted">450g</p>
+						<hr>
+						<p class="modal-category-text font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellat debitis ipsam nostrum, magni et?</p>
+						<hr>
+						<i class="fas fa-pepper-hot d-inline-block text-muted" ></i>
+						<h1 class="modal-spicy text-uppercase d-inline-block font-weight-bold">reviews</h1>
+						<div class="spicy-level mb-3">
+						  <div class="level text-center font-weight-bold">4/5</div>
+						</div>
+						<i class="fas fa-utensils d-inline-block text-muted"></i>
+						<h1 class="modal-nutritions text-uppercase d-inline-block font-weight-bold">details</h1>
+						<div class="row">
+						  <div class="col">
+							<p class="text-muted nutritions-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, consectetur!
+							</p>
+						  </div>
+						  <div class="col">
+							  <p class="text-muted nutritions-text">
+								  18kt White Gold 100%<br>
+								  Diamond 100% <br>
+							  </p>
+						  </div>
+						</div>
+					</div>
+                
+              </div>
+            </div>
+	  </div>
+	  
+	  <!--COllection Modal 4 -->
+	  <div class="modal fade modalbox" id="modalboxCollection4" tabindex="-1" role="dialog" aria-labelledby="modalboxTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <img class="popup-image" src="img/popular4.png" alt="popup-image">              
+                      <div class="popup-image-text modal-title" id="modalboxTitle">
+                        <h3 class="modal-header-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                        <span class="modal-menu-price">$22</span>
+                      </div>
+                      <button type="button" class=" close-button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+						<p class="text-muted">450g</p>
+						<hr>
+						<p class="modal-category-text font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo repellat debitis ipsam nostrum, magni et?</p>
+						<hr>
+						<i class="fas fa-pepper-hot d-inline-block text-muted" ></i>
+						<h1 class="modal-spicy text-uppercase d-inline-block font-weight-bold">reviews</h1>
+						<div class="spicy-level mb-3">
+						  <div class="level text-center font-weight-bold">4/5</div>
+						</div>
+						<i class="fas fa-utensils d-inline-block text-muted"></i>
+						<h1 class="modal-nutritions text-uppercase d-inline-block font-weight-bold">details</h1>
+						<div class="row">
+						  <div class="col">
+							<p class="text-muted nutritions-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, consectetur!
+							</p>
+						  </div>
+						  <div class="col">
+							  <p class="text-muted nutritions-text">
+								  18kt White Gold 100%<br>
+								  Diamond 100% <br>
+							  </p>
+						  </div>
+						</div>
+					</div>
+                
+              </div>
+            </div>
+      </div>
     <section class="ftco-section bg-light ftco-room">
     	<div class="container-fluid px-0">
     		<div class="row no-gutters justify-content-center mb-5 pb-3">
@@ -323,104 +511,123 @@
     		</div>
     	</div>
     </section>
-
-
-    <section class="ftco-section testimony-section bg-light">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Testimony</span>
-            <h2 class="mb-4">What people are saying !</h2>
-          </div>
-        </div>  
-        <div class="row justify-content-center">
-          <div class="col-md-8 ftco-animate">
-          	<div class="row ftco-animate">
-		          <div class="col-md-12">
-		            <div class="carousel-testimony owl-carousel ftco-owl">
-		              <div class="item">
-		                <div class="testimony-wrap py-4 pb-5">
-		                  <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
-		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="icon-quote-left"></i>
-		                    </span>
-		                  </div>
-		                  <div class="text text-center">
-		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ad, voluptatum ex praesentium, culpa esse cum, incidunt reiciendis officia vel impedit nam commodi corrupti assumenda.</p>
-		                    <p class="name">John Ake</p>
-		                    <span class="position">Guests</span>
-		                  </div>
-		                </div>
-		              </div>
-		              <div class="item">
-		                <div class="testimony-wrap py-4 pb-5">
-		                  <div class="user-img mb-4" style="background-image: url(images/person_2.jpg)">
-		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="icon-quote-left"></i>
-		                    </span>
-		                  </div>
-		                  <div class="text text-center">
-		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas autem nemo nam, officia maiores culpa odio fugiat explicabo ipsam cupiditate doloribus quaerat, aliquam impedit mollitia.</p>
-		                    <p class="name">John Ake</p>
-		                    <span class="position">Guests</span>
-		                  </div>
-		                </div>
-		              </div>
-		              <div class="item">
-		                <div class="testimony-wrap py-4 pb-5">
-		                  <div class="user-img mb-4" style="background-image: url(images/person_3.jpg)">
-		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="icon-quote-left"></i>
-		                    </span>
-		                  </div>
-		                  <div class="text text-center">
-		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ad doloribus quae a. Quidem, reiciendis impedit beatae assumenda mollitia quam necessitatibus modi iste nihil voluptas.</p>
-		                    <p class="name">John Ake</p>
-		                    <span class="position">Guests</span>
-		                  </div>
-		                </div>
-		              </div>
-		              <div class="item">
-		                <div class="testimony-wrap py-4 pb-5">
-		                  <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
-		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="icon-quote-left"></i>
-		                    </span>
-		                  </div>
-		                  <div class="text text-center">
-		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iste a, quae suscipit nostrum debitis numquam quisquam saepe, quo eveniet eaque placeat culpa quibusdam ab.</p>
-		                    <p class="name">John Ake</p>
-		                    <span class="position">Guests</span>
-		                  </div>
-		                </div>
-		              </div>
-		              <div class="item">
-		                <div class="testimony-wrap py-4 pb-5">
-		                  <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
-		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="icon-quote-left"></i>
-		                    </span>
-		                  </div>
-		                  <div class="text text-center">
-		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ducimus ipsa saepe, consectetur culpa ex ut. Quaerat accusantium, nihil neque fuga error velit earum aliquid!</p>
-		                    <p class="name">John Ake</p>
-		                    <span class="position">Guests</span>
-		                  </div>
-		                </div>
-		              </div>
-		            </div>
-		          </div>
-		        </div>
-          </div>
-        </div>
-      </div>
-	</section>
 	
+	<!-- FEATURED PRODUCTS  -->
+	<section  class="ftco-section ftco-menu w-100 " style="background-image: url(img/);">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<span class="subheading">Jewellery</span>
+					<h2>Featured Products</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="pricing-entry d-flex ftco-animate">
+						<div class="img order-md-last" style="background-image: url(img/product1.jpg);"></div>
+						<div class="desc pr-3 text-md-right">
+							<div class="d-md-flex text align-items-center">
+								<h3 class="order-md-last heading-left"><span>Pearl Neckles</span></h3>
+								<span class="price price-left">$20.00</span>
+							</div>
+							<div class="d-block">
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, architecto?</p>
+							</div>
+						</div>
+					</div>
+					<div class="pricing-entry d-flex ftco-animate">
+						<div class="img order-md-last" style="background-image: url(img/product1.jpg);"></div>
+						<div class="desc pr-3 text-md-right">
+							<div class="d-md-flex text align-items-center">
+								<h3 class="order-md-last heading-left"><span>Pearl Neckles</span></h3>
+								<span class="price price-left">$29.00</span>
+							</div>
+							<div class="d-block">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, nam!</p>
+							</div>
+						</div>
+					</div>
+					<div class="pricing-entry d-flex ftco-animate">
+						<div class="img order-md-last" style="background-image: url(img/product1.jpg);"></div>
+						<div class="desc pr-3 text-md-right">
+							<div class="d-md-flex text align-items-center">
+								<h3 class="order-md-last heading-left"><span>Pearl Neckles</span></h3>
+								<span class="price price-left">$20.00</span>
+							</div>
+							<div class="d-block">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, illum.</p>
+							</div>
+						</div>
+					</div>
+					<div class="pricing-entry d-flex ftco-animate">
+						<div class="img order-md-last" style="background-image: url(img/product1.jpg);"></div>
+						<div class="desc pr-3 text-md-right">
+							<div class="d-md-flex text align-items-center">
+								<h3 class="order-md-last heading-left"><span>Pearl Neckles</span></h3>
+								<span class="price price-left">$20.00</span>
+							</div>
+							<div class="d-block">
+								<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, voluptatum.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="pricing-entry d-flex ftco-animate">
+						<div class="img" style="background-image: url(img/product1.jpg);"></div>
+						<div class="desc pl-3">
+							<div class="d-md-flex text align-items-center">
+								<h3><span>Pearl Neckles</span></h3>
+								<span class="price">$49.91</span>
+							</div>
+							<div class="d-block">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolor!</p>
+							</div>
+						</div>
+					</div>
+					<div class="pricing-entry d-flex ftco-animate">
+						<div class="img" style="background-image: url(img/product1.jpg);"></div>
+						<div class="desc pl-3">
+							<div class="d-md-flex text align-items-center">
+								<h3><span>Pearl Neckles</span></h3>
+								<span class="price">$20.00</span>
+							</div>
+							<div class="d-block">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, accusamus.</p>
+							</div>
+						</div>
+					</div>
+					<div class="pricing-entry d-flex ftco-animate">
+						<div class="img" style="background-image: url(img/product1.jpg);"></div>
+						<div class="desc pl-3">
+							<div class="d-md-flex text align-items-center">
+								<h3><span>Pearl Neckles</span></h3>
+								<span class="price">$20.00</span>
+							</div>
+							<div class="d-block">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nobis.</p>
+							</div>
+						</div>
+					</div>
+					<div class="pricing-entry d-flex ftco-animate">
+						<div class="img" style="background-image: url(img/product1.jpg);"></div>
+						<div class="desc pl-3">
+							<div class="d-md-flex text align-items-center">
+								<h3><span>Pearl Neckles</span></h3>
+								<span class="price">$20.00</span>
+							</div>
+							<div class="d-block">
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, non!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END FEATURED PRODUCTS -->
+
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-services-wrap">
 		<div class="container">
 			<div class="row no-gutters">
@@ -441,7 +648,7 @@
 				<div class="col-md-3">
 					<a href="#" class="services-wrap img align-items-end d-flex" style="background-image: url(img/services2.jpg);">
 						<!-- <div class="text text-center pb-2">
-							<h3>Restaurant</h3>
+							<h3>product</h3>
 						</div> -->
 					</a>
 				</div>
@@ -483,122 +690,105 @@
 			</div>
 		</section> -->
 		
-		<section class="ftco-section ftco-menu w-100" style="background-image: url(img/product-bg.jpg);">
-			<div class="container">
-				<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Jewellery</span>
-            <h2>Featured Products</h2>
-          </div>
-        </div>
-				<div class="row">
-        	<div class="col-md-6">
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img order-md-last" style="background-image: url(img/product1.jpg);"></div>
-        			<div class="desc pr-3 text-md-right">
-	        			<div class="d-md-flex text align-items-center">
-	        				<h3 class="order-md-last heading-left"><span>Pearl Neckles</span></h3>
-	        				<span class="price price-left">$20.00</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, architecto?</p>
-	        			</div>
-        			</div>
-        		</div>
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img order-md-last" style="background-image: url(img/product1.jpg);"></div>
-        			<div class="desc pr-3 text-md-right">
-	        			<div class="d-md-flex text align-items-center">
-	        				<h3 class="order-md-last heading-left"><span>Pearl Neckles</span></h3>
-	        				<span class="price price-left">$29.00</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, nam!</p>
-	        			</div>
-	        		</div>
-        		</div>
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img order-md-last" style="background-image: url(img/product1.jpg);"></div>
-        			<div class="desc pr-3 text-md-right">
-	        			<div class="d-md-flex text align-items-center">
-	        				<h3 class="order-md-last heading-left"><span>Pearl Neckles</span></h3>
-	        				<span class="price price-left">$20.00</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, illum.</p>
-	        			</div>
-	        		</div>
-        		</div>
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img order-md-last" style="background-image: url(img/product1.jpg);"></div>
-        			<div class="desc pr-3 text-md-right">
-	        			<div class="d-md-flex text align-items-center">
-	        				<h3 class="order-md-last heading-left"><span>Pearl Neckles</span></h3>
-	        				<span class="price price-left">$20.00</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, voluptatum.</p>
-	        			</div>
-	        		</div>
-        		</div>
-        	</div>
 
-        	<div class="col-md-6">
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(img/product1.jpg);"></div>
-        			<div class="desc pl-3">
-	        			<div class="d-md-flex text align-items-center">
-	        				<h3><span>Pearl Neckles</span></h3>
-	        				<span class="price">$49.91</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolor!</p>
-	        			</div>
-	        		</div>
-        		</div>
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(img/product1.jpg);"></div>
-        			<div class="desc pl-3">
-	        			<div class="d-md-flex text align-items-center">
-	        				<h3><span>Pearl Neckles</span></h3>
-	        				<span class="price">$20.00</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, accusamus.</p>
-	        			</div>
-	        		</div>
-        		</div>
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(img/product1.jpg);"></div>
-        			<div class="desc pl-3">
-	        			<div class="d-md-flex text align-items-center">
-	        				<h3><span>Pearl Neckles</span></h3>
-	        				<span class="price">$20.00</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nobis.</p>
-	        			</div>
-	        		</div>
-        		</div>
-        		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(img/product1.jpg);"></div>
-        			<div class="desc pl-3">
-	        			<div class="d-md-flex text align-items-center">
-	        				<h3><span>Pearl Neckles</span></h3>
-	        				<span class="price">$20.00</span>
-	        			</div>
-	        			<div class="d-block">
-	        				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, non!</p>
-	        			</div>
-	        		</div>
-        		</div>
-        	</div>
-        </div>
-			</div>
-		</section>
+		<section class="ftco-section testimony-section bg-light">
+				<div class="container">
+					<div class="row justify-content-center mb-5 pb-3">
+					<div class="col-md-7 heading-section text-center ftco-animate">
+						<span class="subheading">Testimony</span>
+					  <h2 class="mb-4">What people are saying !</h2>
+					</div>
+				  </div>  
+				  <div class="row justify-content-center">
+					<div class="col-md-8 ftco-animate">
+						<div class="row ftco-animate">
+							<div class="col-md-12">
+							  <div class="carousel-testimony owl-carousel ftco-owl">
+								<div class="item">
+								  <div class="testimony-wrap py-4 pb-5">
+									<div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+									  <span class="quote d-flex align-items-center justify-content-center">
+										<i class="icon-quote-left"></i>
+									  </span>
+									</div>
+									<div class="text text-center">
+										<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
+									  <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ad, voluptatum ex praesentium, culpa esse cum, incidunt reiciendis officia vel impedit nam commodi corrupti assumenda.</p>
+									  <p class="name">John Ake</p>
+									  <span class="position">Guests</span>
+									</div>
+								  </div>
+								</div>
+								<div class="item">
+								  <div class="testimony-wrap py-4 pb-5">
+									<div class="user-img mb-4" style="background-image: url(images/person_2.jpg)">
+									  <span class="quote d-flex align-items-center justify-content-center">
+										<i class="icon-quote-left"></i>
+									  </span>
+									</div>
+									<div class="text text-center">
+										<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
+									  <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas autem nemo nam, officia maiores culpa odio fugiat explicabo ipsam cupiditate doloribus quaerat, aliquam impedit mollitia.</p>
+									  <p class="name">John Ake</p>
+									  <span class="position">Guests</span>
+									</div>
+								  </div>
+								</div>
+								<div class="item">
+								  <div class="testimony-wrap py-4 pb-5">
+									<div class="user-img mb-4" style="background-image: url(images/person_3.jpg)">
+									  <span class="quote d-flex align-items-center justify-content-center">
+										<i class="icon-quote-left"></i>
+									  </span>
+									</div>
+									<div class="text text-center">
+										<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
+									  <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ad doloribus quae a. Quidem, reiciendis impedit beatae assumenda mollitia quam necessitatibus modi iste nihil voluptas.</p>
+									  <p class="name">John Ake</p>
+									  <span class="position">Guests</span>
+									</div>
+								  </div>
+								</div>
+								<div class="item">
+								  <div class="testimony-wrap py-4 pb-5">
+									<div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+									  <span class="quote d-flex align-items-center justify-content-center">
+										<i class="icon-quote-left"></i>
+									  </span>
+									</div>
+									<div class="text text-center">
+										<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
+									  <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iste a, quae suscipit nostrum debitis numquam quisquam saepe, quo eveniet eaque placeat culpa quibusdam ab.</p>
+									  <p class="name">John Ake</p>
+									  <span class="position">Guests</span>
+									</div>
+								  </div>
+								</div>
+								<div class="item">
+								  <div class="testimony-wrap py-4 pb-5">
+									<div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+									  <span class="quote d-flex align-items-center justify-content-center">
+										<i class="icon-quote-left"></i>
+									  </span>
+									</div>
+									<div class="text text-center">
+										<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
+									  <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ducimus ipsa saepe, consectetur culpa ex ut. Quaerat accusantium, nihil neque fuga error velit earum aliquid!</p>
+									  <p class="name">John Ake</p>
+									  <span class="position">Guests</span>
+									</div>
+								  </div>
+								</div>
+							  </div>
+							</div>
+						  </div>
+					</div>
+				  </div>
+				</div>
+			  </section>
 
 
-    <section class="ftco-section">
+    <!-- <section class="ftco-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -654,7 +844,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="instagram">
       <div class="container-fluid">
@@ -722,7 +912,6 @@
             <div class="ftco-footer-widget mb-4 ml-md-5">
               <h2 class="ftco-heading-2">Useful Links</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Blog</a></li>
                 <li><a href="#" class="py-2 d-block">Products</a></li>
                 <li><a href="#" class="py-2 d-block">Amenities</a></li>
                 <li><a href="#" class="py-2 d-block">Gift Card</a></li>
@@ -778,6 +967,7 @@
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/jquery.stellar.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>

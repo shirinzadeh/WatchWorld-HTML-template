@@ -4815,9 +4815,9 @@ a.close.disabled {
   border-bottom-right-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem; }
   .modal-footer > :not(:first-child) {
-    margin-left: .25rem; }
+    margin-left: 0.25rem; }
   .modal-footer > :not(:last-child) {
-    margin-right: .25rem; }
+    margin-right: 0.25rem; }
 
 .modal-scrollbar-measure {
   position: absolute;
