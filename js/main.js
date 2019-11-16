@@ -3,6 +3,30 @@ AOS.init({
   easing: "slide"
 });
 
+// Wrap every letter in a span
+var textWrapper = document.querySelector(".ml12");
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime
+  .timeline({ loop: true })
+  .add({
+    targets: ".ml12 .letter",
+    translateX: [40, 0],
+    translateZ: 0,
+    opacity: [0, 1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  })
+  .add({
+    targets: ".ml12 .letter",
+    translateX: [0, -30],
+    opacity: [1, 0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 500 + 30 * i
+  });
+
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load("particles-js", "particles.json", function() {
   console.log("callback - particles.js config loaded");
@@ -102,10 +126,7 @@ particlesJS.load("particles-js", "particles.json", function() {
       margin: 0,
       stagePadding: 0,
       nav: false,
-      navText: [
-        '<span class="ion-ios-arrow-back">',
-        '<span class="ion-ios-arrow-forward">'
-      ],
+      navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
       responsive: {
         0: {
           items: 1
@@ -129,10 +150,7 @@ particlesJS.load("particles-js", "particles.json", function() {
       stagePadding: 0,
       nav: true,
       dots: true,
-      navText: [
-        '<span class="ion-ios-arrow-back">',
-        '<span class="ion-ios-arrow-forward">'
-      ],
+      navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
       responsive: {
         0: {
           items: 1
@@ -244,13 +262,8 @@ particlesJS.load("particles-js", "particles.json", function() {
   var counter = function() {
     $("#section-counter").waypoint(
       function(direction) {
-        if (
-          direction === "down" &&
-          !$(this.element).hasClass("ftco-animated")
-        ) {
-          var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(
-            ","
-          );
+        if (direction === "down" && !$(this.element).hasClass("ftco-animated")) {
+          var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(",");
           $(".number").each(function() {
             var $this = $(this),
               num = $this.data("number");
@@ -274,10 +287,7 @@ particlesJS.load("particles-js", "particles.json", function() {
     var i = 0;
     $(".ftco-animate").waypoint(
       function(direction) {
-        if (
-          direction === "down" &&
-          !$(this.element).hasClass("ftco-animated")
-        ) {
+        if (direction === "down" && !$(this.element).hasClass("ftco-animated")) {
           i++;
 
           $(this.element).addClass("item-animate");
@@ -312,29 +322,26 @@ particlesJS.load("particles-js", "particles.json", function() {
 
   // navigation
   var OnePageNav = function() {
-    $(".smoothscroll[href^='#'], #ftco-nav ul li a[href^='#']").on(
-      "click",
-      function(e) {
-        e.preventDefault();
+    $(".smoothscroll[href^='#'], #ftco-nav ul li a[href^='#']").on("click", function(e) {
+      e.preventDefault();
 
-        var hash = this.hash,
-          navToggler = $(".navbar-toggler");
-        $("html, body").animate(
-          {
-            scrollTop: $(hash).offset().top
-          },
-          700,
-          "easeInOutExpo",
-          function() {
-            window.location.hash = hash;
-          }
-        );
-
-        if (navToggler.is(":visible")) {
-          navToggler.click();
+      var hash = this.hash,
+        navToggler = $(".navbar-toggler");
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top
+        },
+        700,
+        "easeInOutExpo",
+        function() {
+          window.location.hash = hash;
         }
+      );
+
+      if (navToggler.is(":visible")) {
+        navToggler.click();
       }
-    );
+    });
     $("body").on("activate.bs.scrollspy", function() {
       console.log("nice");
     });
@@ -381,4 +388,10 @@ particlesJS.load("particles-js", "particles.json", function() {
     $(".player").mb_YTPlayer();
   };
   bgVideo();
+
+  $(".grid").masonry({
+    // options...
+    itemSelector: ".grid-item",
+    columnWidth: 200
+  });
 })(jQuery);

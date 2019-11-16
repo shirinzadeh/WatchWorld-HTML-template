@@ -64,8 +64,8 @@ h1, h2, h3, h4, h5,
 }
 
 .logo__link {
-	& h3{
-		font-size: 1.4rem;
+	h3 {
+		font-size: 2rem;
 		color: $primary;
 		@include media-breakpoint-down(md) {
 			font-size: 1.2rem;
@@ -295,6 +295,14 @@ h1, h2, h3, h4, h5,
 	text-transform: uppercase;
 }
 
+//text animation wrap letter
+.ml12 {
+	.letter {
+		display: inline-block;
+		line-height: 1em;
+	}
+}	
+
 .hero-wrap{
 	width: 100%;
 	height: 600px;
@@ -331,6 +339,7 @@ h1, h2, h3, h4, h5,
 			color: $white;
 			font-size: 60px;
 			font-family: $font-primary;
+			text-shadow: 0px 0 7px $primary;
 		}
 		.btn-primary{
 			border: 1px solid rgba(255,255,255,.4);
@@ -460,13 +469,13 @@ h1, h2, h3, h4, h5,
 					color: rgba(255,255,255,.9);
 				}
 				h1 {
-					font-size: 7vw;
-					font-weight: 400;
-					color: $white;
-					line-height: 1;
 					@include media-breakpoint-down(md) {
 						font-size: 50px;
 					}
+					font-size: 7vw;
+					font-weight: 400;
+					color: $white;
+					line-height: 1;				  
 				}
 				h2{
 					font-size: 14px;
@@ -2718,7 +2727,7 @@ textarea.form-control {
 	}
 	&:hover {
 		.popup-image {
-			transform: translateY(3rem) scale(1.2);
+			transform:scale(1);
 			@include transition(1s);
 		}
 		> .popup-image-text {
@@ -2728,20 +2737,14 @@ textarea.form-control {
 	.popup-image {
 		width: 100%;
 		position: relative;
+		transform: scale(.8);
 		@include transition(2s);
 	}
 	.popup-image-text{
 		position: absolute;
 		bottom: 2rem;
-		color: $white;
 		font-size: 16px;
-		text-align: center; 
-		text-shadow: 0 0 10px $white; 
 		@include transition(1s);
-
-		.modal-header-heading{
-			padding: 0px;
-		}
 
 		.modal-menu-price{
 			font-size: 25px;
