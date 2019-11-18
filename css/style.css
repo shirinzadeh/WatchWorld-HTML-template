@@ -8711,58 +8711,6 @@ h1, h2, h3, h4, h5,
     .wrap-about {
       padding-left: 6em; } }
 
-.services-wrap {
-  width: 100%;
-  display: block;
-  height: 250px;
-  position: relative;
-  z-index: 0; }
-  .services-wrap:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    background: #000000;
-    opacity: 0;
-    z-index: -1;
-    -webkit-transition: 0.3s;
-    transition: 0.3s; }
-  .services-wrap .text {
-    width: 100%; }
-    .services-wrap .text h3 {
-      font-family: "Poppins", Arial, sans-serif;
-      font-size: 16px;
-      text-transform: uppercase;
-      color: #fff;
-      font-weight: 500; }
-    .services-wrap .text span {
-      display: block;
-      color: rgba(255, 255, 255, 0.7); }
-    .services-wrap .text .icon {
-      width: 30px;
-      height: 30px;
-      background: #ff3535;
-      display: block;
-      border-radius: 50%; }
-      .services-wrap .text .icon span {
-        color: #fff; }
-  .services-wrap.services-overlay:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    background: #000000;
-    opacity: .3;
-    z-index: -1;
-    -webkit-transition: 0.3s;
-    transition: 0.3s; }
-  .services-wrap:hover:after {
-    opacity: .5; }
-
 .services {
   width: 100%;
   background: #f8f9fa;
@@ -10167,4 +10115,30 @@ textarea.form-control {
   position: absolute;
   height: 100%;
   width: 100%; }
+
+.gallery-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr); }
+  .gallery-wrapper .box {
+    background-color: #eee; }
+
+.parallax-window {
+  min-height: 500px;
+  background: transparent; }
+  .parallax-window.parallax {
+    position: relative; }
+  .parallax-window .parallax-content {
+    position: absolute;
+    bottom: 4rem;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6); }
+    .parallax-window .parallax-content h1 {
+      text-shadow: 5px 5px 15px #ff3535;
+      font-size: 4rem; }
+  .parallax-window.parallax {
+    position: relative; }
 /*# sourceMappingURL=style.css.map */
