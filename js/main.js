@@ -3,57 +3,10 @@ AOS.init({
    easing: "slide"
 });
 
-// Wrap every letter in a span
-var textWrapper = document.querySelector(".ml12");
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime
-   .timeline({ loop: true })
-   .add({
-      targets: ".ml12 .letter",
-      translateX: [40, 0],
-      translateZ: 0,
-      opacity: [0, 1],
-      easing: "easeOutExpo",
-      duration: 1200,
-      delay: (el, i) => 500 + 30 * i
-   })
-   .add({
-      targets: ".ml12 .letter",
-      translateX: [0, -30],
-      opacity: [1, 0],
-      easing: "easeInExpo",
-      duration: 1100,
-      delay: (el, i) => 500 + 30 * i
-   });
-
-// Wrap every letter in a span
-var textWrapper = document.querySelector(".ml2");
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime
-   .timeline({ loop: true })
-   .add({
-      targets: ".ml2 .letter",
-      scale: [4, 1],
-      opacity: [0, 1],
-      translateZ: 0,
-      easing: "easeOutExpo",
-      duration: 950,
-      delay: (el, i) => 70 * i
-   })
-   .add({
-      targets: ".ml2",
-      opacity: 0,
-      duration: 1000,
-      easing: "easeOutExpo",
-      delay: 1000
-   });
-
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load("particles-js", "particles.json", function() {
-   console.log("callback - particles.js config loaded");
-});
+// particlesJS.load("particles-js", "particles.json", function() {
+//    console.log("callback - particles.js config loaded");
+// });
 
 (function($) {
    "use strict";
@@ -377,6 +330,11 @@ particlesJS.load("particles-js", "particles.json", function() {
       }
    });
 
+   // gallery img popup
+   $(".box-img-popup").magnificPopup({
+      type: "image"
+   });
+
    $(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
       disableOn: 700,
       type: "iframe",
@@ -397,9 +355,17 @@ particlesJS.load("particles-js", "particles.json", function() {
    };
    bgVideo();
 
-   $(".grid").masonry({
-      // options...
-      itemSelector: ".grid-item",
-      columnWidth: 200
+   $(".tlt").textillate({
+      minDisplayTime: 2000,
+
+      in: {
+         effect: "tada",
+         delayScale: 3,
+         delay: 550,
+         sync: false,
+         shuffle: false,
+         reverse: false,
+         callback: function() {}
+      }
    });
 })(jQuery);
