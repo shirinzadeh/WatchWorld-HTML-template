@@ -309,6 +309,39 @@ AOS.init({
    };
    OnePageNav();
 
+   //view more
+   $("#toggle-vm").click(function() {
+      var elem = $("#toggle-vm").text();
+      if (elem == "View More") {
+         //Stuff to do when btn is in the read more state
+         $("#toggle-vm").text("View Less");
+         $("#product-dp-none").slideDown();
+      } else {
+         //Stuff to do when btn is in the read less state
+         $("#toggle-vm").text("View More");
+         $("#product-dp-none").slideUp();
+      }
+   });
+
+   //magnifying glass efect
+   $("#exzoom").exzoom({
+      //options here
+   });
+
+   // $(".tlt").textillate({
+   //    minDisplayTime: 2000,
+
+   //    in: {
+   //       effect: "tada",
+   //       delayScale: 3,
+   //       delay: 550,
+   //       sync: false,
+   //       shuffle: false,
+   //       reverse: false,
+   //       callback: function() {}
+   //    }
+   // });
+
    // magnific popup
    $(".image-popup").magnificPopup({
       type: "image",
@@ -354,18 +387,23 @@ AOS.init({
       $(".player").mb_YTPlayer();
    };
    bgVideo();
-
-   $(".tlt").textillate({
-      minDisplayTime: 2000,
-
-      in: {
-         effect: "tada",
-         delayScale: 3,
-         delay: 550,
-         sync: false,
-         shuffle: false,
-         reverse: false,
-         callback: function() {}
-      }
-   });
 })(jQuery);
+
+//search input
+const category = document.querySelectorAll(".categories li");
+const search = document.querySelector(".search-form input");
+const filterFullNames = term => {
+   Array.from(category)
+      .filter(category => !category.textContent.toLowerCase().includes(term))
+      .forEach(category => category.classList.add("is-filtered"));
+   console.log(category);
+
+   Array.from(category)
+      .filter(category => category.textContent.toLowerCase().includes(term))
+      .forEach(category => category.classList.remove("is-filtered"));
+};
+
+search.addEventListener("keyup", () => {
+   const term = search.value.trim().toLowerCase();
+   filterFullNames(term);
+});

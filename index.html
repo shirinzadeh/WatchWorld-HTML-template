@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Web World - HTML5 Templatess </title>
+	<title>Web World - Free Bootstrap4 Template</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="This is a HTML5 template using bootstrap4">
@@ -18,6 +18,8 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/jquery.exzoom.css">
+
 	<link rel="stylesheet" href="css/ionicons.min.css">
 	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
 	<link rel="stylesheet" href="css/jquery.timepicker.css">
@@ -28,22 +30,22 @@
 
 <body>
 
-	<div class="logo">
+	<!-- <div class="logo">
 		<div class="logo__link d-inline-flex flex-column justify-content-center align-items-center w-100">
 			<a href="index.html" class="mx-auto"><img src="img/logo.png" style="width:70px;" alt="Logo"></a>
 			<h3 class="mx-auto text-uppercase font-weight-bold my-0">Web World </h3>
 		</div>
-	</div>
+	</div> -->
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
+			<a href="index.html"> <img src="img/logo.png" width="50px;" height="50px" alt=""></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
 				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>
-			<a href="index.html"> <img src="img/logo.png" width="50px;" height="50px" alt=""></a>
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav mx-auto">
-					<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+					<li class="nav-item cta"><a href="index.html" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
 					<li class="nav-item"><a href="product.html" class="nav-link">Products</a></li>
 					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
@@ -55,11 +57,11 @@
 
 	<!-- END nav -->
 	<div class="hero">
-		<div class="container-wrap d-flex justify-content-end align-items-end">
+		<!-- <div class="container-wrap d-flex justify-content-end align-items-end">
 			<a href="#" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
 				<span class="ion-ios-play play"></span>
 			</a>
-		</div>
+		</div> -->
 		<section class="home-slider owl-carousel">
 			<div class="slider-item" style="background-image:url(img/slider-1.jpeg);">
 				<div class="overlay"></div>
@@ -67,7 +69,7 @@
 					<div class="row no-gutters slider-text align-items-center">
 						<div class="col-md-8 ftco-animate">
 							<div class="text mb-5 pb-5">
-								<h1 class="tlt">Web World</h1>
+								<h1 class="tlt"><span>W</span>eb World</h1>
 								<h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
 							</div>
 						</div>
@@ -81,7 +83,7 @@
 					<div class="row no-gutters slider-text align-items-center">
 						<div class="col-md-8 ftco-animate">
 							<div class="text mb-5 pb-5">
-								<h1 class="mb-3 tlt">Web World</h1>
+								<h1 class="mb-3 tlt"><span>W</span>eb World</h1>
 								<h2>Lorem ipsum dolor &amp; sit amet consectetur. </h2>
 							</div>
 						</div>
@@ -91,7 +93,7 @@
 		</section>
 	</div>
 
-	<section class="ftco-section">
+	<section id="popular" class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
@@ -165,14 +167,16 @@
 	</section>
 
 	<!--COllection Modal 1 -->
-	<div class="modal fade modalbox" id="modalboxCollection" tabindex="-1" role="dialog" aria-labelledby="modalboxTitle"
-		aria-hidden="true">
+	<div class="modal fade modalbox" id="modalboxCollection1" tabindex="-1" role="dialog"
+		aria-labelledby="modalboxTitle" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<img class="popup-image" src="img/popular1.png" alt="popup-image">
-					<div class="popup-image-text modal-title text-center" id="modalboxTitle">
-						<div class="modal-menu-price">$22</div>
+					<div class=" modal-title" id="modalboxTitle">
+						<div class="popup-image-text">
+							<div class="modal-menu-price">$22</div>
+						</div>
 					</div>
 					<button type="button" class=" close-button" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
@@ -196,14 +200,16 @@
 	</div>
 
 	<!--COllection Modal 2 -->
-	<div class="modal fade modalbox" id="modalboxCollection" tabindex="-1" role="dialog" aria-labelledby="modalboxTitle"
-		aria-hidden="true">
+	<div class="modal fade modalbox" id="modalboxCollection2" tabindex="-1" role="dialog"
+		aria-labelledby="modalboxTitle" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<img class="popup-image" src="img/popular2.png" alt="popup-image">
-					<div class="popup-image-text modal-title" id="modalboxTitle">
-						<div class="modal-menu-price">$22</div>
+					<div class="modal-title" id="modalboxTitle">
+						<div class="popup-image-text">
+							<span class="modal-menu-price">$22</span>
+						</div>
 					</div>
 					<button type="button" class=" close-button" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
@@ -241,14 +247,16 @@
 	</div>
 
 	<!--COllection Modal 3 -->
-	<div class="modal fade modalbox" id="modalboxCollection" tabindex="-1" role="dialog" aria-labelledby="modalboxTitle"
-		aria-hidden="true">
+	<div class="modal fade modalbox" id="modalboxCollection3" tabindex="-1" role="dialog"
+		aria-labelledby="modalboxTitle" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<img class="popup-image" src="img/popular3.png" alt="popup-image">
-					<div class="popup-image-text modal-title" id="modalboxTitle">
-						<div class="modal-menu-price">$22</div>
+					<div class="modal-title" id="modalboxTitle">
+						<div class="popup-image-text">
+							<span class="modal-menu-price">$22</span>
+						</div>
 					</div>
 					<button type="button" class=" close-button" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
@@ -287,15 +295,16 @@
 	</div>
 
 	<!--COllection Modal 4 -->
-	<div class="modal fade modalbox" id="modalboxCollection" tabindex="-1" role="dialog" aria-labelledby="modalboxTitle"
-		aria-hidden="true">
+	<div class="modal fade modalbox" id="modalboxCollection4" tabindex="-1" role="dialog"
+		aria-labelledby="modalboxTitle" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<img class="popup-image" src="img/popular4.png" alt="popup-image">
-					<div class="popup-image-text modal-title" id="modalboxTitle">
-						<h3 class="modal-header-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-						<span class="modal-menu-price">$22</span>
+					<div class="modal-title" id="modalboxTitle">
+						<div class="popup-image-text">
+							<span class="modal-menu-price">$22</span>
+						</div>
 					</div>
 					<button type="button" class=" close-button" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
@@ -334,9 +343,9 @@
 	</div>
 
 	<!-- NEW ARRIVAL  -->
-	<section class="ftco-section bg-light ftco-room">
-		<div class="container-fluid px-0">
-			<div class="row no-gutters justify-content-center mb-5 pb-3">
+	<section id="new-arrival" class="ftco-section bg-light ftco-room">
+		<div class="container px-0">
+			<div class="row no-gutters justify-content-center align-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
 					<span class="subheading">Web World products</span>
 					<h2 class="mb-4 text-capitalize">new arrival</h2>
@@ -344,10 +353,10 @@
 			</div>
 			<div class="row no-gutters">
 				<div class="col-lg-6">
-					<div class="room-wrap">
-						<div class="img d-flex align-items-center"
+					<div class="room-wrap h-100">
+						<div class="img h-100 d-flex align-items-center"
 							style="background-image: url(img/slider-2.jpg); background-position: center;">
-							<div class="text text-center px-4 py-4">
+							<div class="text text-center p-4">
 								<h2 class="font-weight-bold"> <a href="index.html">Web World </a></h2>
 								<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores iure nemo, alias
 									quod minus numquam?</p>
@@ -357,16 +366,14 @@
 				</div>
 				<div class="col-lg-6">
 					<div class="room-wrap d-md-flex">
-						<a href="#" class="img" style="background-image: url(img/new1.jpeg);"></a>
+						<div class="img" style="background-image: url(img/new1.jpeg);"></div>
 						<div class="half left-arrow d-flex align-items-center">
 							<div class="text p-4 p-xl-5 text-center">
-								<p class="star mb-0"><span class="ion-ios-star"></span><span
-										class="ion-ios-star"></span><span class="ion-ios-star"></span><span
-										class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 								<p class="mb-0"><span class="price mr-1">$120.00</span>
-									<h3 class="mb-3"><a href="">Lorem Ipsum</a></h3>
-									<p class="pt-1"><a href="" class="btn-custom px-3 py-2">View Details <span
-												class="icon-long-arrow-right"></span></a></p>
+									<h3 class="mb-3">Lorem Ipsum</h3>
+									<p class="pt-1"><a href="product-single.html" class="btn-custom px-3 py-2">View
+											Details
+											<span class="icon-long-arrow-right"></span></a></p>
 							</div>
 						</div>
 					</div>
@@ -374,32 +381,28 @@
 
 				<div class="col-lg-6">
 					<div class="room-wrap d-md-flex">
-						<a href="#" class="img order-md-last" style="background-image: url(img/new2.jpeg);"></a>
+						<div class="img order-md-last" style="background-image: url(img/new2.jpeg);"></div>
 						<div class="half right-arrow d-flex align-items-center">
 							<div class="text p-4 p-xl-5 text-center">
-								<p class="star mb-0"><span class="ion-ios-star"></span><span
-										class="ion-ios-star"></span><span class="ion-ios-star"></span><span
-										class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 								<p class="mb-0"><span class="price mr-1">$120.00</span>
-									<h3 class="mb-3"><a href="">Lorem Ipsum</a></h3>
-									<p class="pt-1"><a href="" class="btn-custom px-3 py-2">View Details <span
-												class="icon-long-arrow-right"></span></a></p>
+									<h3 class="mb-3">Lorem Ipsum</h3>
+									<p class="pt-1"><a href="product-single.html" class="btn-custom px-3 py-2">View
+											Details
+											<span class="icon-long-arrow-right"></span></a></p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="room-wrap d-md-flex">
-						<a href="#" class="img order-md-last" style="background-image: url(img/new3.jpeg);"></a>
-						<div class="half right-arrow d-flex align-items-center">
+						<div class="img" style="background-image: url(img/new3.jpeg);"></div>
+						<div class="half left-arrow d-flex align-items-center">
 							<div class="text p-4 p-xl-5 text-center">
-								<p class="star mb-0"><span class="ion-ios-star"></span><span
-										class="ion-ios-star"></span><span class="ion-ios-star"></span><span
-										class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 								<p class="mb-0"><span class="price mr-1">$120.00</span>
-									<h3 class="mb-3"><a href="">Lorem Ipsum</a></h3>
-									<p class="pt-1"><a href="" class="btn-custom px-3 py-2">View Details <span
-												class="icon-long-arrow-right"></span></a></p>
+									<h3 class="mb-3">Lorem Ipsum</h3>
+									<p class="pt-1"><a href="product-single.html" class="btn-custom px-3 py-2">View
+											Details
+											<span class="icon-long-arrow-right"></span></a></p>
 							</div>
 						</div>
 					</div>
@@ -407,32 +410,28 @@
 
 				<div class="col-lg-6">
 					<div class="room-wrap d-md-flex">
-						<a href="#" class="img" style="background-image: url(img/new4.jpeg);"></a>
-						<div class="half left-arrow d-flex align-items-center">
+						<div class="img order-md-last" style="background-image: url(img/new4.jpeg);"></div>
+						<div class="half right-arrow d-flex align-items-center">
 							<div class="text p-4 p-xl-5 text-center">
-								<p class="star mb-0"><span class="ion-ios-star"></span><span
-										class="ion-ios-star"></span><span class="ion-ios-star"></span><span
-										class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 								<p class="mb-0"><span class="price mr-1">$120.00</span>
-									<h3 class="mb-3"><a href="">Lorem Ipsum</a></h3>
-									<p class="pt-1"><a href="" class="btn-custom px-3 py-2">View Details <span
-												class="icon-long-arrow-right"></span></a></p>
+									<h3 class="mb-3">Lorem Ipsum</h3>
+									<p class="pt-1"><a href="product-single.html" class="btn-custom px-3 py-2">View
+											Details
+											<span class="icon-long-arrow-right"></span></a></p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="room-wrap d-md-flex">
-						<a href="#" class="img" style="background-image: url(img/new5.jpeg);"></a>
+						<div class="img" style="background-image: url(img/new5.jpeg);"></div>
 						<div class="half left-arrow d-flex align-items-center">
 							<div class="text p-4 p-xl-5 text-center">
-								<p class="star mb-0"><span class="ion-ios-star"></span><span
-										class="ion-ios-star"></span><span class="ion-ios-star"></span><span
-										class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 								<p class="mb-0"><span class="price mr-1">$120.00</span>
-									<h3 class="mb-3"><a href="">Lorem Ipsum</a></h3>
-									<p class="pt-1"><a href="" class="btn-custom px-3 py-2">View Details <span
-												class="icon-long-arrow-right"></span></a></p>
+									<h3 class="mb-3">Lorem Ipsum</h3>
+									<p class="pt-1"><a href="product-single.html" class="btn-custom px-3 py-2">View
+											Details
+											<span class="icon-long-arrow-right"></span></a></p>
 							</div>
 						</div>
 					</div>
@@ -442,7 +441,7 @@
 	</section>
 
 	<!-- FEATURED PRODUCTS  -->
-	<section class="ftco-section ftco-menu w-100" style="background-image: url(img/);">
+	<section id="product" class="ftco-section ftco-menu w-100" style="background-image: url(img/);">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
@@ -453,51 +452,39 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="pricing-entry d-flex ftco-animate">
-						<div class="img order-md-last" style="background-image: url(img/product1.jpg);"></div>
+						<div class="img order-md-last" style="background-image: url(img/gallery1.jpg);"></div>
 						<div class="desc pr-3 text-md-right">
 							<div class="d-md-flex text align-items-center">
 								<h3 class="order-md-last heading-left"><span>Pearl Neckles</span></h3>
 								<span class="price price-left">$20.00</span>
 							</div>
-							<div class="d-block">
-								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, architecto?
+							<div class="d-block desc__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, praesentium!
 								</p>
 							</div>
 						</div>
 					</div>
 					<div class="pricing-entry d-flex ftco-animate">
-						<div class="img order-md-last" style="background-image: url(img/product1.jpg);"></div>
+						<div class="img order-md-last" style="background-image: url(img/gallery1.jpg);"></div>
 						<div class="desc pr-3 text-md-right">
 							<div class="d-md-flex text align-items-center">
 								<h3 class="order-md-last heading-left"><span>Pearl Neckles</span></h3>
 								<span class="price price-left">$29.00</span>
 							</div>
-							<div class="d-block">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, nam!</p>
+							<div class="d-block desc__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, praesentium!</p>
 							</div>
 						</div>
 					</div>
 					<div class="pricing-entry d-flex ftco-animate">
-						<div class="img order-md-last" style="background-image: url(img/product1.jpg);"></div>
+						<div class="img order-md-last" style="background-image: url(img/gallery1.jpg);"></div>
 						<div class="desc pr-3 text-md-right">
 							<div class="d-md-flex text align-items-center">
 								<h3 class="order-md-last heading-left"><span>Pearl Neckles</span></h3>
 								<span class="price price-left">$20.00</span>
 							</div>
-							<div class="d-block">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, illum.</p>
-							</div>
-						</div>
-					</div>
-					<div class="pricing-entry d-flex ftco-animate">
-						<div class="img order-md-last" style="background-image: url(img/product1.jpg);"></div>
-						<div class="desc pr-3 text-md-right">
-							<div class="d-md-flex text align-items-center">
-								<h3 class="order-md-last heading-left"><span>Pearl Neckles</span></h3>
-								<span class="price price-left">$20.00</span>
-							</div>
-							<div class="d-block">
-								<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, voluptatum.</p>
+							<div class="d-block desc__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, praesentium!</p>
 							</div>
 						</div>
 					</div>
@@ -505,50 +492,38 @@
 
 				<div class="col-md-6">
 					<div class="pricing-entry d-flex ftco-animate">
-						<div class="img" style="background-image: url(img/product1.jpg);"></div>
-						<div class="desc pl-3">
-							<div class="d-md-flex text align-items-center">
-								<h3><span>Pearl Neckles</span></h3>
-								<span class="price">$49.91</span>
-							</div>
-							<div class="d-block">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolor!</p>
-							</div>
-						</div>
-					</div>
-					<div class="pricing-entry d-flex ftco-animate">
-						<div class="img" style="background-image: url(img/product1.jpg);"></div>
+						<div class="img" style="background-image: url(img/gallery1.jpg);"></div>
 						<div class="desc pl-3">
 							<div class="d-md-flex text align-items-center">
 								<h3><span>Pearl Neckles</span></h3>
 								<span class="price">$20.00</span>
 							</div>
-							<div class="d-block">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, accusamus.</p>
+							<div class="d-block desc__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, praesentium!</p>
 							</div>
 						</div>
 					</div>
 					<div class="pricing-entry d-flex ftco-animate">
-						<div class="img" style="background-image: url(img/product1.jpg);"></div>
+						<div class="img" style="background-image: url(img/gallery1.jpg);"></div>
 						<div class="desc pl-3">
 							<div class="d-md-flex text align-items-center">
 								<h3><span>Pearl Neckles</span></h3>
 								<span class="price">$20.00</span>
 							</div>
-							<div class="d-block">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nobis.</p>
+							<div class="d-block desc__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, praesentium!</p>
 							</div>
 						</div>
 					</div>
 					<div class="pricing-entry d-flex ftco-animate">
-						<div class="img" style="background-image: url(img/product1.jpg);"></div>
+						<div class="img" style="background-image: url(img/gallery1.jpg);"></div>
 						<div class="desc pl-3">
 							<div class="d-md-flex text align-items-center">
 								<h3><span>Pearl Neckles</span></h3>
 								<span class="price">$20.00</span>
 							</div>
-							<div class="d-block">
-								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, non!</p>
+							<div class="d-block desc__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, praesentium!/p>
 							</div>
 						</div>
 					</div>
@@ -576,7 +551,7 @@
 	</div>
 
 	<!-- TESTIMONIAL  -->
-	<section class="ftco-section testimony-section bg-light">
+	<section id="testimonial" class="ftco-section testimony-section bg-light">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
@@ -592,95 +567,61 @@
 								<div class="item">
 									<div class="testimony-wrap py-4 pb-5">
 										<div class="user-img mb-4" style="background-image: url(img/person_1.jpg)">
-											<span class="quote d-flex align-items-center justify-content-center">
-												<i class="icon-quote-left"></i>
-											</span>
 										</div>
 										<div class="text text-center">
+											<p class="name">John Ake</p>
+											<span class="position">Custumer</span>
 											<p class="star"><span class="ion-ios-star"></span><span
 													class="ion-ios-star"></span><span class="ion-ios-star"></span><span
 													class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 											<p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-												Pariatur ad, voluptatum ex praesentium, culpa esse cum, incidunt
-												reiciendis officia vel impedit nam commodi corrupti assumenda.</p>
-											<p class="name">John Ake</p>
-											<span class="position">Guests</span>
+												Pariatur ad, voluptatum ex praesentium</p>
 										</div>
 									</div>
 								</div>
 								<div class="item">
 									<div class="testimony-wrap py-4 pb-5">
 										<div class="user-img mb-4" style="background-image: url(img/person_2.jpg)">
-											<span class="quote d-flex align-items-center justify-content-center">
-												<i class="icon-quote-left"></i>
-											</span>
 										</div>
 										<div class="text text-center">
+											<p class="name">John Ake</p>
+											<span class="position">Custumer</span>
 											<p class="star"><span class="ion-ios-star"></span><span
 													class="ion-ios-star"></span><span class="ion-ios-star"></span><span
 													class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 											<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 												Voluptas autem nemo nam, officia maiores culpa odio fugiat explicabo
 												ipsam cupiditate doloribus quaerat, aliquam impedit mollitia.</p>
-											<p class="name">John Ake</p>
-											<span class="position">Guests</span>
 										</div>
 									</div>
 								</div>
 								<div class="item">
 									<div class="testimony-wrap py-4 pb-5">
 										<div class="user-img mb-4" style="background-image: url(img/person_3.jpg)">
-											<span class="quote d-flex align-items-center justify-content-center">
-												<i class="icon-quote-left"></i>
-											</span>
 										</div>
 										<div class="text text-center">
+											<p class="name">John Ake</p>
+											<span class="position">Custumer</span>
 											<p class="star"><span class="ion-ios-star"></span><span
 													class="ion-ios-star"></span><span class="ion-ios-star"></span><span
 													class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 											<p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-												Repellendus ad doloribus quae a. Quidem, reiciendis impedit beatae
-												assumenda mollitia quam necessitatibus modi iste nihil voluptas.</p>
-											<p class="name">John Ake</p>
-											<span class="position">Guests</span>
+												Repellendus ad doloribus quae a.</p>
 										</div>
 									</div>
 								</div>
 								<div class="item">
 									<div class="testimony-wrap py-4 pb-5">
 										<div class="user-img mb-4" style="background-image: url(img/person_4.jpg)">
-											<span class="quote d-flex align-items-center justify-content-center">
-												<i class="icon-quote-left"></i>
-											</span>
 										</div>
 										<div class="text text-center">
+											<p class="name">John Ake</p>
+											<span class="position">Custumer</span>
 											<p class="star"><span class="ion-ios-star"></span><span
 													class="ion-ios-star"></span><span class="ion-ios-star"></span><span
 													class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
 											<p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-												iste a, quae suscipit nostrum debitis numquam quisquam saepe, quo
-												eveniet eaque placeat culpa quibusdam ab.</p>
-											<p class="name">John Ake</p>
-											<span class="position">Guests</span>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="testimony-wrap py-4 pb-5">
-										<div class="user-img mb-4" style="background-image: url(img/person_1.jpg)">
-											<span class="quote d-flex align-items-center justify-content-center">
-												<i class="icon-quote-left"></i>
-											</span>
-										</div>
-										<div class="text text-center">
-											<p class="star"><span class="ion-ios-star"></span><span
-													class="ion-ios-star"></span><span class="ion-ios-star"></span><span
-													class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-											<p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-												ducimus ipsa saepe, consectetur culpa ex ut. Quaerat accusantium, nihil
-												neque fuga error velit earum aliquid!</p>
-											<p class="name">John Ake</p>
-											<span class="position">Guests</span>
+												iste a, quae suscipit nostrum debitis numquam quisquam saepe</p>
 										</div>
 									</div>
 								</div>
@@ -699,42 +640,42 @@
 			<div class="row no-gutters justify-content-center pb-5">
 				<div class="col-md-7 text-center heading-section ftco-animate">
 					<span class="subheading">Photos</span>
-					<h2><span>Instagram</span></h2>
+					<h2><span>Images</span></h2>
 				</div>
 			</div>
 			<div class="row no-gutters">
 				<div class="col-sm-12 col-md ftco-animate">
 					<a href="img/new1.jpeg" class="insta-img image-popup" style="background-image: url(img/new1.jpeg);">
 						<div class="icon d-flex justify-content-center">
-							<span class="icon-instagram align-self-center"></span>
+							<span class="icon-zoom_in align-self-center"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-sm-12 col-md ftco-animate">
 					<a href="img/new2.jpeg" class="insta-img image-popup" style="background-image: url(img/new2.jpeg);">
 						<div class="icon d-flex justify-content-center">
-							<span class="icon-instagram align-self-center"></span>
+							<span class="icon-zoom_in align-self-center"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-sm-12 col-md ftco-animate">
 					<a href="img/new3.jpeg" class="insta-img image-popup" style="background-image: url(img/new3.jpeg);">
 						<div class="icon d-flex justify-content-center">
-							<span class="icon-instagram align-self-center"></span>
+							<span class="icon-zoom_in align-self-center"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-sm-12 col-md ftco-animate">
 					<a href="img/new4.jpeg" class="insta-img image-popup" style="background-image: url(img/new4.jpeg);">
 						<div class="icon d-flex justify-content-center">
-							<span class="icon-instagram align-self-center"></span>
+							<span class="icon-zoom_in align-self-center"></span>
 						</div>
 					</a>
 				</div>
 				<div class="col-sm-12 col-md ftco-animate">
 					<a href="img/new5.jpeg" class="insta-img image-popup" style="background-image: url(img/new5.jpeg);">
 						<div class="icon d-flex justify-content-center">
-							<span class="icon-instagram align-self-center"></span>
+							<span class="icon-zoom_in align-self-center"></span>
 						</div>
 					</a>
 				</div>
@@ -751,31 +692,16 @@
 						<h2 class="ftco-heading-2">Web World </h2>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis recusandae natus placeat
 							velit consequatur cumque?</p>
-						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-						</ul>
 					</div>
 				</div>
 				<div class="col-md">
 					<div class="ftco-footer-widget mb-4 ml-md-5">
 						<h2 class="ftco-heading-2">Useful Links</h2>
 						<ul class="list-unstyled">
-							<li><a href="#" class="py-2 d-block">Products</a></li>
-							<li><a href="#" class="py-2 d-block">Amenities</a></li>
-							<li><a href="#" class="py-2 d-block">Gift Card</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Privacy</h2>
-						<ul class="list-unstyled">
-							<li><a href="#" class="py-2 d-block">Career</a></li>
-							<li><a href="#" class="py-2 d-block">About Us</a></li>
-							<li><a href="#" class="py-2 d-block">Contact Us</a></li>
-							<li><a href="#" class="py-2 d-block">Services</a></li>
+							<li><a href="#popular" class="py-2 d-block">Popular Collection</a></li>
+							<li><a href="#new-arrival" class="py-2 d-block">New Arrival</a></li>
+							<li><a href="#product" class="py-2 d-block">Products</a></li>
+							<li><a href="#testimonial" class="py-2 d-block">Testimonial</a></li>
 						</ul>
 					</div>
 				</div>
@@ -783,12 +709,19 @@
 					<div class="ftco-footer-widget mb-4">
 						<h2 class="ftco-heading-2">Have a Questions?</h2>
 						<div class="block-23 mb-3">
-							<ul>
-								<li><span class="icon icon-map-marker"></span><span class="text">street name</span></li>
-								<li><a href="#"><span class="icon icon-phone"></span><span class="text">+123
-											456789</span></a></li>
-								<li><a href="#"><span class="icon icon-envelope"></span><span
-											class="text">info@yourdomain.com</span></a></li>
+							<ul class="ftco-footer__contact">
+								<li><span class="icon icon-map-marker"></span><span class="text">Baku, Azerbaijan</span>
+								</li>
+								<li><span class="icon icon-phone"></span><span class="text">+99451 302 00 66\</span>
+								</li>
+								<li><span class="icon icon-envelope"></span><span class="text">office@webworld.az</span>
+								</li>
+							</ul>
+							<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-0">
+								<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+								<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+								<li class="ftco-animate"><a href="https://www.instagram.com/webworld.az/"><span
+											class="icon-instagram"></span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -798,9 +731,9 @@
 				<div class="col-md-12 text-center">
 					<p>
 						Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
-						is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
-							href="http://webworld.az" target="_blank">webworld.az - Tahmasib Shirinzadeh</a>
+						<script>document.write(new Date().getFullYear());</script> Created with <i
+							class="icon-heart color-danger" aria-hidden="true"></i> by <a href="http://webworld.az"
+							target="_blank">Web World</a>
 					</p>
 				</div>
 			</div>
@@ -822,8 +755,11 @@
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<!-- textillate cdn  -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
-	<script src="js/jquery.lettering.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script> -->
+
+	<!-- <script src="js/jquery.lettering.js"></script> -->
+	<script src="js/jquery.exzoom.js"></script>
+
 	<script src="js/jquery.easing.1.3.js"></script>
 	<script src="js/jquery.waypoints.min.js"></script>
 	<script src="js/jquery.stellar.min.js"></script>
