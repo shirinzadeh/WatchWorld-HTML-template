@@ -8,26 +8,26 @@ AOS.init({
 //    console.log("callback - particles.js config loaded");
 // });
 
-(function($) {
+(function ($) {
    "use strict";
 
    var isMobile = {
-      Android: function() {
+      Android: function () {
          return navigator.userAgent.match(/Android/i);
       },
-      BlackBerry: function() {
+      BlackBerry: function () {
          return navigator.userAgent.match(/BlackBerry/i);
       },
-      iOS: function() {
+      iOS: function () {
          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
       },
-      Opera: function() {
+      Opera: function () {
          return navigator.userAgent.match(/Opera Mini/i);
       },
-      Windows: function() {
+      Windows: function () {
          return navigator.userAgent.match(/IEMobile/i);
       },
-      any: function() {
+      any: function () {
          return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
       }
    };
@@ -41,17 +41,17 @@ AOS.init({
       scrollProperty: "scroll"
    });
 
-   var fullHeight = function() {
+   var fullHeight = function () {
       $(".js-fullheight").css("height", $(window).height());
-      $(window).resize(function() {
+      $(window).resize(function () {
          $(".js-fullheight").css("height", $(window).height());
       });
    };
    fullHeight();
 
    // loader
-   var loader = function() {
-      setTimeout(function() {
+   var loader = function () {
+      setTimeout(function () {
          if ($("#ftco-loader").length > 0) {
             $("#ftco-loader").removeClass("show");
          }
@@ -62,7 +62,7 @@ AOS.init({
    // Scrollax
    $.Scrollax();
 
-   var carousel = function() {
+   var carousel = function () {
       $(".home-slider").owlCarousel({
          loop: true,
          autoplay: true,
@@ -134,7 +134,7 @@ AOS.init({
    carousel();
 
    $("nav .dropdown").hover(
-      function() {
+      function () {
          var $this = $(this);
          // 	 timer;
          // clearTimeout(timer);
@@ -143,7 +143,7 @@ AOS.init({
          // $this.find('.dropdown-menu').addClass('animated-fast fadeInUp show');
          $this.find(".dropdown-menu").addClass("show");
       },
-      function() {
+      function () {
          var $this = $(this);
          // timer;
          // timer = setTimeout(function(){
@@ -155,13 +155,13 @@ AOS.init({
       }
    );
 
-   $("#dropdown04").on("show.bs.dropdown", function() {
+   $("#dropdown04").on("show.bs.dropdown", function () {
       console.log("show");
    });
 
    // scroll
-   var scrollWindow = function() {
-      $(window).scroll(function() {
+   var scrollWindow = function () {
+      $(window).scroll(function () {
          var $w = $(this),
             st = $w.scrollTop(),
             navbar = $(".ftco_navbar"),
@@ -200,32 +200,32 @@ AOS.init({
    scrollWindow();
 
    var isMobile = {
-      Android: function() {
+      Android: function () {
          return navigator.userAgent.match(/Android/i);
       },
-      BlackBerry: function() {
+      BlackBerry: function () {
          return navigator.userAgent.match(/BlackBerry/i);
       },
-      iOS: function() {
+      iOS: function () {
          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
       },
-      Opera: function() {
+      Opera: function () {
          return navigator.userAgent.match(/Opera Mini/i);
       },
-      Windows: function() {
+      Windows: function () {
          return navigator.userAgent.match(/IEMobile/i);
       },
-      any: function() {
+      any: function () {
          return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
       }
    };
 
-   var counter = function() {
+   var counter = function () {
       $("#section-counter").waypoint(
-         function(direction) {
+         function (direction) {
             if (direction === "down" && !$(this.element).hasClass("ftco-animated")) {
                var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(",");
-               $(".number").each(function() {
+               $(".number").each(function () {
                   var $this = $(this),
                      num = $this.data("number");
                   console.log(num);
@@ -244,19 +244,19 @@ AOS.init({
    };
    counter();
 
-   var contentWayPoint = function() {
+   var contentWayPoint = function () {
       var i = 0;
       $(".ftco-animate").waypoint(
-         function(direction) {
+         function (direction) {
             if (direction === "down" && !$(this.element).hasClass("ftco-animated")) {
                i++;
 
                $(this.element).addClass("item-animate");
-               setTimeout(function() {
-                  $("body .ftco-animate.item-animate").each(function(k) {
+               setTimeout(function () {
+                  $("body .ftco-animate.item-animate").each(function (k) {
                      var el = $(this);
                      setTimeout(
-                        function() {
+                        function () {
                            var effect = el.data("animate-effect");
                            if (effect === "fadeIn") {
                               el.addClass("fadeIn ftco-animated");
@@ -282,8 +282,8 @@ AOS.init({
    contentWayPoint();
 
    // navigation
-   var OnePageNav = function() {
-      $(".smoothscroll[href^='#'], #ftco-nav ul li a[href^='#']").on("click", function(e) {
+   var OnePageNav = function () {
+      $(".smoothscroll[href^='#'], #ftco-nav ul li a[href^='#']").on("click", function (e) {
          e.preventDefault();
 
          var hash = this.hash,
@@ -294,7 +294,7 @@ AOS.init({
             },
             700,
             "easeInOutExpo",
-            function() {
+            function () {
                window.location.hash = hash;
             }
          );
@@ -303,44 +303,26 @@ AOS.init({
             navToggler.click();
          }
       });
-      $("body").on("activate.bs.scrollspy", function() {
+      $("body").on("activate.bs.scrollspy", function () {
          console.log("nice");
       });
    };
    OnePageNav();
 
    //view more
-   $("#toggle-vm").click(function() {
+   $("#toggle-vm").click(function () {
       var elem = $("#toggle-vm").text();
+      var n = $('#categories-none');
       if (elem == "View More") {
          //Stuff to do when btn is in the read more state
          $("#toggle-vm").text("View Less");
-         $("#product-dp-none").slideDown();
+         $("#product-dp-none, #categories-none").slideDown();
       } else {
          //Stuff to do when btn is in the read less state
          $("#toggle-vm").text("View More");
-         $("#product-dp-none").slideUp();
+         $("#product-dp-none, #categories-none").slideUp();
       }
    });
-
-   //magnifying glass efect
-   $("#exzoom").exzoom({
-      //options here
-   });
-
-   // $(".tlt").textillate({
-   //    minDisplayTime: 2000,
-
-   //    in: {
-   //       effect: "tada",
-   //       delayScale: 3,
-   //       delay: 550,
-   //       sync: false,
-   //       shuffle: false,
-   //       reverse: false,
-   //       callback: function() {}
-   //    }
-   // });
 
    // magnific popup
    $(".image-popup").magnificPopup({
@@ -383,10 +365,17 @@ AOS.init({
       autoclose: true
    });
 
-   var bgVideo = function() {
+   //about yt bg video
+   var bgVideo = function () {
       $(".player").mb_YTPlayer();
    };
    bgVideo();
+
+   //magnifying glass efect
+   $("#exzoom").exzoom({
+      //options here
+   });
+
 })(jQuery);
 
 //search input

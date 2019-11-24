@@ -19,7 +19,6 @@
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/jquery.exzoom.css">
-
 	<link rel="stylesheet" href="css/ionicons.min.css">
 	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
 	<link rel="stylesheet" href="css/jquery.timepicker.css">
@@ -44,7 +43,7 @@
 				<span class="oi oi-menu"></span> Menu
 			</button>
 			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav mx-auto">
+				<ul class="navbar-nav ml-auto">
 					<li class="nav-item cta"><a href="index.html" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
 					<li class="nav-item"><a href="product.html" class="nav-link">Products</a></li>
@@ -69,7 +68,12 @@
 					<div class="row no-gutters slider-text align-items-center">
 						<div class="col-md-8 ftco-animate">
 							<div class="text mb-5 pb-5">
-								<h1 class="tlt"><span>W</span>eb World</h1>
+								<div class="d-flex">
+									<div class="h1 ht"><span class="w">W</span>eb</div>
+									<div class="h1 ht" class="tlt">
+										<span><span class="w">W</span>orld</span>
+									</div>
+								</div>
 								<h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
 							</div>
 						</div>
@@ -83,8 +87,13 @@
 					<div class="row no-gutters slider-text align-items-center">
 						<div class="col-md-8 ftco-animate">
 							<div class="text mb-5 pb-5">
-								<h1 class="mb-3 tlt"><span>W</span>eb World</h1>
-								<h2>Lorem ipsum dolor &amp; sit amet consectetur. </h2>
+								<div class="d-flex">
+									<div class="h1 ht"><span class="w">W</span>eb</div>
+									<div class="h1 ht" class="tlt">
+										<span><span class="w">W</span>orld</span>
+									</div>
+								</div>
+								<h2>Lorem ipsum dolor &amp; sit amet consectetur.</h2>
 							</div>
 						</div>
 					</div>
@@ -167,8 +176,8 @@
 	</section>
 
 	<!--COllection Modal 1 -->
-	<div class="modal fade modalbox" id="modalboxCollection1" tabindex="-1" role="dialog"
-		aria-labelledby="modalboxTitle" aria-hidden="true">
+	<div class="modal fade modalbox" id="modalboxCollection" tabindex="-1" role="dialog" aria-labelledby="modalboxTitle"
+		aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -200,8 +209,8 @@
 	</div>
 
 	<!--COllection Modal 2 -->
-	<div class="modal fade modalbox" id="modalboxCollection2" tabindex="-1" role="dialog"
-		aria-labelledby="modalboxTitle" aria-hidden="true">
+	<div class="modal fade modalbox" id="modalboxCollection" tabindex="-1" role="dialog" aria-labelledby="modalboxTitle"
+		aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -247,8 +256,8 @@
 	</div>
 
 	<!--COllection Modal 3 -->
-	<div class="modal fade modalbox" id="modalboxCollection3" tabindex="-1" role="dialog"
-		aria-labelledby="modalboxTitle" aria-hidden="true">
+	<div class="modal fade modalbox" id="modalboxCollection" tabindex="-1" role="dialog" aria-labelledby="modalboxTitle"
+		aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -295,8 +304,8 @@
 	</div>
 
 	<!--COllection Modal 4 -->
-	<div class="modal fade modalbox" id="modalboxCollection4" tabindex="-1" role="dialog"
-		aria-labelledby="modalboxTitle" aria-hidden="true">
+	<div class="modal fade modalbox" id="modalboxCollection" tabindex="-1" role="dialog" aria-labelledby="modalboxTitle"
+		aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -712,14 +721,14 @@
 							<ul class="ftco-footer__contact">
 								<li><span class="icon icon-map-marker"></span><span class="text">Baku, Azerbaijan</span>
 								</li>
-								<li><span class="icon icon-phone"></span><span class="text">+99451 302 00 66\</span>
+								<li><span class="icon icon-phone"></span><span class="text">+99451 302 00 66</span>
 								</li>
 								<li><span class="icon icon-envelope"></span><span class="text">office@webworld.az</span>
 								</li>
 							</ul>
 							<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-0">
-								<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-								<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+								<li class="ftco-animate"><a href="https://www.facebook.com/webworld.az/"><span
+											class="icon-facebook"></span></a></li>
 								<li class="ftco-animate"><a href="https://www.instagram.com/webworld.az/"><span
 											class="icon-instagram"></span></a></li>
 							</ul>
@@ -740,26 +749,16 @@
 		</div>
 	</footer>
 
-
-
 	<!-- loader -->
 	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
 			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
 			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
 				stroke="#F96D00" /></svg></div>
 
-
 	<script src="js/jquery.min.js"></script>
-
 	<script src="js/jquery-migrate-3.0.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<!-- textillate cdn  -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script> -->
-
-	<!-- <script src="js/jquery.lettering.js"></script> -->
-	<script src="js/jquery.exzoom.js"></script>
-
 	<script src="js/jquery.easing.1.3.js"></script>
 	<script src="js/jquery.waypoints.min.js"></script>
 	<script src="js/jquery.stellar.min.js"></script>
@@ -768,6 +767,7 @@
 	<script src="js/aos.js"></script>
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/jquery.mb.YTPlayer.min.js"></script>
+	<script src="js/jquery.exzoom.js"></script>
 	<script src="js/bootstrap-datepicker.js"></script>
 	<!-- // <script src="js/jquery.timepicker.min.js"></script> -->
 	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -777,7 +777,6 @@
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
-
 </body>
 
 </html>
