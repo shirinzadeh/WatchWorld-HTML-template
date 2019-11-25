@@ -21,13 +21,21 @@ $primary: #1fb6d1;
     -moz-transition:    all $transition ease;
     -o-transition:      all $transition ease;
     -webkit-transition: all $transition ease;
-    -ms-transition: 		all $transition ease;
+    -ms-transition: 	all $transition ease;
     transition:         all $transition ease;
 }  
 
 html {
 	overflow-x: hidden;
-	scroll-behavior: smooth;
+	// scroll-behavior: smooth;
+}body {
+    &.modal-open {
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
 }
 
 body {
@@ -37,7 +45,7 @@ body {
 	line-height: 1.8;
 	font-weight: 400;
 	color: lighten($black,40%);
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 	&.menu-show {
 		overflow: hidden;
 		position: fixed;
@@ -600,10 +608,13 @@ h1, h2, h3, h4, h5,
 		&:first-of-type {  
 			animation:  6s forwards showup ;
 			@include media-breakpoint-down(md) {
-				padding-right: 2rem;
+				padding-right: 5rem;
 			}
 			@include media-breakpoint-down(sm) {
-				padding-right: 2rem;
+				padding-right: 0rem;
+			}
+			@include media-breakpoint-down(xs) {
+				padding-right: 4rem;
 			}
 		}
 		
@@ -952,6 +963,9 @@ h1, h2, h3, h4, h5,
 				border-style: solid;
 				border-width: 12px 15px 12px 0;
 				border-color: transparent #fff transparent transparent;
+				@include media-breakpoint-down(sm) {
+					opacity: 0;
+				}
 			}
 		}
 		&.right-arrow{
@@ -966,6 +980,27 @@ h1, h2, h3, h4, h5,
 				border-style: solid;
 				border-width: 12px 0 12px 15px;
 				border-color: transparent transparent transparent #fff;
+				@include media-breakpoint-down(sm) {
+					opacity: 0;
+				}
+			}
+		}
+		&.top-arrow{
+			&:before{
+				position: absolute;
+				top: -12px;
+				left: 50%;
+				transform: translatex(-50%);
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 12px 12px 15px;
+				border-color: transparent transparent #fff transparent ;
+				opacity: 0;
+				@include media-breakpoint-down(sm) {
+					opacity: 1;
+				}
 			}
 		}
 		&:hover,&:focus{
@@ -2692,10 +2727,11 @@ textarea.form-control {
 }
 
 // MODAL 
+
 .modal-header{
     padding: 0 !important;
 	position: relative;  
-	background-color:lighten($color: $primary, $amount: 20%);
+	background-color: rgba($primary,.1);
 
 	.close-button {
 		position: absolute;
@@ -2707,27 +2743,31 @@ textarea.form-control {
 		background: $white;
 		color: $primary;
 		padding: 0 1.2rem;
+		@include media-breakpoint-down(xs) {
+			right: 0;
+			top:0;
+		}
 	}
 	.popup-image {
 		width: 100%;
 		position: relative;
 		transform: scale(.6);
-		@include transition(2s);
 	}
 	.popup-image-text{
 		position: absolute;
-		bottom: 2rem;
-		left: 42%;
+		bottom: 1rem;
+		left: 50%;
+		transform: translateX(-50%);
 		font-size: 16px;
-		@include transition(1s);
 
 		.modal-menu-price{
-			font-size: 25px;
+			font-size: 2rem;
+			font-weight: 500;
 			background: $black;
+			border: 3px solid $black;
 			color: $white;
-			border-radius: 1rem;
-			padding: .5rem 1.5rem;
-			@include transition(.3s);
+			border-radius: 3px;
+			padding: 0rem 1.5rem;
 		}
 
 	}
@@ -2777,11 +2817,11 @@ textarea.form-control {
 }
 
 // PARTICLES 
-#particles-js {
+// #particles-js {
 	// position: absolute;
 	// height: 100%;
 	// width: 100%;
-}
+// }
 
 .gallery-wrapper {
 	display: grid;

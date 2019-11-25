@@ -8091,8 +8091,14 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 html {
-  overflow-x: hidden;
-  scroll-behavior: smooth; }
+  overflow-x: hidden; }
+
+body.modal-open {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0; }
 
 body {
   font-family: "Poppins", Arial, sans-serif;
@@ -8101,7 +8107,7 @@ body {
   line-height: 1.8;
   font-weight: 400;
   color: #666666;
-  overflow-x: hidden; }
+  overflow-x: hidden !important; }
   body.menu-show {
     overflow: hidden;
     position: fixed;
@@ -8517,10 +8523,13 @@ h1, h2, h3, h4, h5,
               animation: 6s forwards showup; }
       @media (max-width: 991.98px) {
         .owl-carousel .ht:first-of-type {
-          padding-right: 2rem; } }
+          padding-right: 5rem; } }
       @media (max-width: 767.98px) {
         .owl-carousel .ht:first-of-type {
-          padding-right: 2rem; } }
+          padding-right: 0rem; } }
+      @media (max-width: 575.98px) {
+        .owl-carousel .ht:first-of-type {
+          padding-right: 4rem; } }
     .owl-carousel .ht:last-of-type {
       width: 0px;
       -webkit-animation: 6s 1s forwards reveal;
@@ -8800,6 +8809,9 @@ h1, h2, h3, h4, h5,
       border-style: solid;
       border-width: 12px 15px 12px 0;
       border-color: transparent #fff transparent transparent; }
+      @media (max-width: 767.98px) {
+        .room-wrap .half.left-arrow:after {
+          opacity: 0; } }
     .room-wrap .half.right-arrow:after {
       position: absolute;
       top: 50%;
@@ -8812,6 +8824,25 @@ h1, h2, h3, h4, h5,
       border-style: solid;
       border-width: 12px 0 12px 15px;
       border-color: transparent transparent transparent #fff; }
+      @media (max-width: 767.98px) {
+        .room-wrap .half.right-arrow:after {
+          opacity: 0; } }
+    .room-wrap .half.top-arrow:before {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      -webkit-transform: translatex(-50%);
+              transform: translatex(-50%);
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 12px 12px 15px;
+      border-color: transparent transparent #fff transparent;
+      opacity: 0; }
+      @media (max-width: 767.98px) {
+        .room-wrap .half.top-arrow:before {
+          opacity: 1; } }
     .room-wrap .half:hover, .room-wrap .half:focus {
       background: rgba(31, 182, 209, 0.8); }
       .room-wrap .half:hover.left-arrow:after, .room-wrap .half:focus.left-arrow:after {
@@ -10077,7 +10108,7 @@ textarea.form-control {
 .modal-header {
   padding: 0 !important;
   position: relative;
-  background-color: #6dd6e9; }
+  background-color: rgba(31, 182, 209, 0.1); }
   .modal-header .close-button {
     position: absolute;
     top: -10px;
@@ -10088,28 +10119,30 @@ textarea.form-control {
     background: #fff;
     color: #1fb6d1;
     padding: 0 1.2rem; }
+    @media (max-width: 575.98px) {
+      .modal-header .close-button {
+        right: 0;
+        top: 0; } }
   .modal-header .popup-image {
     width: 100%;
     position: relative;
     -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-    -webkit-transition: all 2s ease;
-    transition: all 2s ease; }
+            transform: scale(0.6); }
   .modal-header .popup-image-text {
     position: absolute;
-    bottom: 2rem;
-    left: 42%;
-    font-size: 16px;
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease; }
+    bottom: 1rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 16px; }
     .modal-header .popup-image-text .modal-menu-price {
-      font-size: 25px;
+      font-size: 2rem;
+      font-weight: 500;
       background: #000000;
+      border: 3px solid #000000;
       color: #fff;
-      border-radius: 1rem;
-      padding: .5rem 1.5rem;
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
+      border-radius: 3px;
+      padding: 0rem 1.5rem; }
 
 .modal-body .modal-category-text {
   font: 14px "Poppins", Arial, sans-serif; }

@@ -59,6 +59,44 @@ AOS.init({
    };
    loader();
 
+   //SMOOTH SCROLL
+   // Select all links with hashes
+   $('a[href*="#"]')
+      // Remove links that don't actually link to anything
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function (event) {
+         // On-page links
+         if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            &&
+            location.hostname == this.hostname
+         ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+               // Only prevent default if animation is actually gonna happen
+               event.preventDefault();
+               $('html, body').animate({
+                  scrollTop: target.offset().top
+               }, 1000, function () {
+                  // Callback after animation
+                  // Must change focus!
+                  var $target = $(target);
+                  $target.focus();
+                  if ($target.is(":focus")) { // Checking if the target was focused
+                     return false;
+                  } else {
+                     $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                     $target.focus(); // Set focus again
+                  };
+               });
+            }
+         }
+      });
+
    // Scrollax
    $.Scrollax();
 
@@ -244,6 +282,28 @@ AOS.init({
    };
    counter();
 
+   //REMOVE BODY SCROLL WHEN MODAL OPEN
+   var $window = $(window),
+      $body = $("body"),
+      $modal = $(".modal"),
+      scrollDistance = 0;
+
+   $modal.on("show.bs.modal", function () {
+      // Get the scroll distance at the time the modal was opened
+      scrollDistance = $window.scrollTop();
+
+      // Pull the top of the body up by that amount
+      $body.css("top", scrollDistance * -1);
+   });
+   $modal.on("hidden.bs.modal", function () {
+      // Remove the negative top value on the body
+      $body.css("top", "");
+
+      // Set the window's scroll position back to what it was before the modal was opened
+      $window.scrollTop(scrollDistance);
+   });
+
+   //animation
    var contentWayPoint = function () {
       var i = 0;
       $(".ftco-animate").waypoint(
@@ -365,20 +425,34 @@ AOS.init({
       autoclose: true
    });
 
-   //about yt bg video
+   //GOOGLE MAP API
+   // var map;
+   // function initMap() {
+   //   map = new google.maps.Map(document.getElementById('map'), {
+   //     center: { lat: 40.4091, lng: 49.8648 },
+   //     zoom: 15
+   //   });
+   //   var marker = new google.maps.Marker({
+   //     position: { lat: 40.4091, lng: 49.8648 },
+   //     map: map,
+   //     title: 'Baku, Narimanov'
+   //   });
+   // }
+
+   //about- yt bg video
+   // The plugin works only if used under a web server. It doesn’t work if you run the HTML page as file (file://…).
+   // https://github.com/pupunzi/jquery.mb.YTPlayer/wiki
    var bgVideo = function () {
       $(".player").mb_YTPlayer();
    };
    bgVideo();
 
    //magnifying glass efect
-   $("#exzoom").exzoom({
-      //options here
-   });
+   $("#exzoom").exzoom();
 
 })(jQuery);
 
-//search input
+//product single- search input
 const category = document.querySelectorAll(".categories li");
 const search = document.querySelector(".search-form input");
 const filterFullNames = term => {
