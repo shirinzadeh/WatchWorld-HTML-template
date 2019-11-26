@@ -60,42 +60,20 @@ AOS.init({
    loader();
 
    //SMOOTH SCROLL
-   // Select all links with hashes
    $('a[href*="#"]')
-      // Remove links that don't actually link to anything
+      //    // Remove links that don't actually link to anything
       .not('[href="#"]')
-      .not('[href="#0"]')
-      .click(function (event) {
-         // On-page links
-         if (
-            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-            &&
-            location.hostname == this.hostname
-         ) {
-            // Figure out element to scroll to
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            // Does a scroll target exist?
-            if (target.length) {
-               // Only prevent default if animation is actually gonna happen
-               event.preventDefault();
-               $('html, body').animate({
-                  scrollTop: target.offset().top
-               }, 1000, function () {
-                  // Callback after animation
-                  // Must change focus!
-                  var $target = $(target);
-                  $target.focus();
-                  if ($target.is(":focus")) { // Checking if the target was focused
-                     return false;
-                  } else {
-                     $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                     $target.focus(); // Set focus again
-                  };
-               });
-            }
+      .not('[href="#0"]').click(function (e) {
+         if (this.hash !== '') {
+            e.preventDefault();
+            const hash = this.hash;
+            $('html, body').animate({
+               scrollTop: $(hash).offset().top
+            },
+               1000
+            )
          }
-      });
+      })
 
    // Scrollax
    $.Scrollax();
@@ -384,6 +362,20 @@ AOS.init({
       }
    });
 
+   //back to top
+   $(window).scroll(function () {
+
+      let position = $(this).scrollTop();
+
+      if (position >= 2600) {
+         $('#back-to-top').addClass('js-scroll-top');
+      }
+      else {
+         $('#back-to-top').removeClass('js-scroll-top');
+
+      }
+   })
+
    // magnific popup
    $(".image-popup").magnificPopup({
       type: "image",
@@ -454,7 +446,9 @@ AOS.init({
 
 //product single- search input
 const category = document.querySelectorAll(".categories li");
-const search = document.querySelector(".search-form input");
+const search = document.querySelector(".sidebar-box__search");
+const btn = document.querySelector('.btn-sidebar');
+
 const filterFullNames = term => {
    Array.from(category)
       .filter(category => !category.textContent.toLowerCase().includes(term))

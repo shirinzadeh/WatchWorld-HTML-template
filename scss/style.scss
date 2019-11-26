@@ -28,16 +28,7 @@ $primary: #1fb6d1;
 html {
 	overflow-x: hidden;
 	// scroll-behavior: smooth;
-}body {
-    &.modal-open {
-        bottom: 0;
-        left: 0;
-        position: fixed;
-        right: 0;
-        top: 0;
-    }
 }
-
 body {
 	font-family: $font-primary;
 	background: $white;
@@ -52,6 +43,13 @@ body {
 		height: 100%;
 		width: 100%;
 	}
+	&.modal-open {
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
 }
 a {
 	transition: .3s all ease;
@@ -73,18 +71,14 @@ h1, h2, h3, h4, h5,
 	color: $primary!important;
 }
 
-.logo__link {
-	h3 {
-		font-size: 2.5rem;
-		color: $primary;
-		@include media-breakpoint-down(md) {
-			font-size: 1.5rem;
-		}
-	}
-}
-
 .nav-shadow {
 	box-shadow: 0 0 10px 0 rgba(0,0,0,.1) !important;
+}
+
+.navbar-brand {
+	font-weight:700;
+	font-size: 20px;
+	text-transform: uppercase;
 }
 
 .ftco-navbar-light {
@@ -98,8 +92,21 @@ h1, h2, h3, h4, h5,
 		padding: 10px 15px;
 	}
 
-	.navbar-brand {
-		color: $white;
+	a {
+		cursor: pointer;
+		color: $black;
+		@include media-breakpoint-down(md){
+			color: $white;
+			font-size: 1rem;
+		}
+		span {
+			font: 35px $font-secondary 700;
+			color: $primary;
+			@include media-breakpoint-down(sm){
+				font-size: 1rem;
+			}
+		}
+		// }
 	}
 
 	.navbar-nav {
@@ -214,6 +221,10 @@ h1, h2, h3, h4, h5,
 		.container > a > img {
 			display: block;
 		}
+
+		.navbar-brand {
+			color: $black;
+		}
 	
 		.nav-item {
 			&.active {
@@ -285,19 +296,7 @@ h1, h2, h3, h4, h5,
 		&.sleep {
 			transition: .3s all ease-out;	
 		}
-
-		.navbar-brand {
-			color: $black;
-		}
 	}
-}
-
-
-
-.navbar-brand {
-	font-weight:700;
-	font-size: 20px;
-	text-transform: uppercase;
 }
 
 .hero-wrap{
@@ -338,6 +337,10 @@ h1, h2, h3, h4, h5,
 			font-size: 60px;
 			font-family: $font-primary;
 			text-shadow: 0px 0 7px $primary;
+			white-space: nowrap;
+			@include media-breakpoint-down(xs) {
+				font-size: 55px;
+			}
 		}
 		.btn-primary{
 			border: 1px solid rgba(255,255,255,.4);
@@ -440,6 +443,9 @@ h1, h2, h3, h4, h5,
 		position: relative;
 		height: 990px;
 		z-index: 0;
+		@include media-breakpoint-down(sm){
+			height: 970px;
+		}
 		.slider-item {
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -449,6 +455,9 @@ h1, h2, h3, h4, h5,
 			z-index: 0;
 			@include media-breakpoint-down(lg){
 				background-position: center center !important;
+			}
+			@include media-breakpoint-down(sm){
+				height: 970px;
 			}
 			.overlay{
 				position: absolute;
@@ -462,6 +471,9 @@ h1, h2, h3, h4, h5,
 			.slider-text {
 				height: 990px;
 				position: relative;
+				@include media-breakpoint-down(sm){
+					height: 970px;
+				}
 				.text{
 					z-index: 0;
 					color: rgba(255,255,255,.9);
@@ -659,6 +671,9 @@ h1, h2, h3, h4, h5,
 	height: 990px;
 	position: relative;
 	z-index: 0;
+	@include media-breakpoint-down(sm){
+		height: 970px;
+	}
 }
 
 .bg-light {
@@ -1013,6 +1028,12 @@ h1, h2, h3, h4, h5,
 			&.right-arrow{
 				&:after{
 					border-color: transparent transparent transparent  rgba($primary,.8);
+
+				}
+			}
+			&.top-arrow{
+				&:before{
+					border-color: transparent transparent  rgba($primary,.8) transparent;
 
 				}
 			}
@@ -2768,6 +2789,9 @@ textarea.form-control {
 			color: $white;
 			border-radius: 3px;
 			padding: 0rem 1.5rem;
+			@include media-breakpoint-down(sm) {
+				font-size: 1.5rem;
+			}
 		}
 
 	}
@@ -2837,37 +2861,34 @@ textarea.form-control {
 	flex-direction: column;
 	justify-content: flex-end;
 	box-sizing: border-box;
-	background: #0c9a9a;
 	color: #fff;
 	grid-column-start: auto;
 	grid-row-start: auto;
 	color: #fff;
-	background:  url('/img/gallery6.jpg');
-	background-size: cover;
-	background-position: center;
+	background:#0c9a9a url('../img/gallery6.jpg') no-repeat center center/cover ;
 	box-shadow: -2px 2px 10px 0px rgba(#444, 0.4);
 	transition: transform 0.3s ease-in-out;
 	cursor: pointer;
 	counter-increment: item-counter;
 
 	&:nth-of-type(2n) {
-		background-image: url("/img/gallery8.jpg");
+		background-image: url("../img/gallery8.jpg");
 	}
 
 	&:nth-of-type(3n) {
-		background-image: url('/img/gallery1.jpg');
+		background-image: url('../img/gallery1.jpg');
 	  }
 	  
 	  &:nth-of-type(4n) {
-		background-image: url('/img/gallery2.jpg');
+		background-image: url('../img/gallery2.jpg');
 	  }
 	  
 	  &:nth-of-type(5n) {
-		background-image: url('/img/gallery4.jpeg');
+		background-image: url('../img/gallery4.jpeg');
 	  }
 	  
 	  &:nth-of-type(6n) {
-		background-image: url('/img/gallery5.jpg');
+		background-image: url('../img/gallery5.jpg');
 	  }
 	  
 	  &:after {
@@ -2914,6 +2935,7 @@ textarea.form-control {
 		}
 }
 
+// HAVE A QUESTION 
 .parallax-window {
     min-height: 500px;
 	background: transparent;
@@ -2923,6 +2945,7 @@ textarea.form-control {
 	.parallax-content {
 		position: absolute;
 		bottom: 4rem;
+		left: 0;
 		z-index: 2;
 		background-color: rgba($black,.6);
 
@@ -2930,7 +2953,31 @@ textarea.form-control {
 			text-shadow: 5px 5px 15px $primary;
 			font-size: 4rem;
 		}
+
+		.contact-form {
+			div {
+				margin: 0;
+			}
+		}
 	}
 }
 
+#back-to-top{
+	font-size: 1.5rem;
+	padding: 0 1rem;
+    background-color: #c9c1ac;
+	display: inline-block;
+	z-index: 3;
+	cursor: pointer;
+	@include border-radius(50%);
+}
+
+.js-scroll-top{
+    position: fixed;
+    bottom: 60px;
+	right: 20px;
+	@include media-breakpoint-down(xs) {
+		right: 85%;
+	}
+}
 
