@@ -1,4 +1,4 @@
-# Free watch based Multi Page template  
+# Free multi-page template  
 Nice website template designed by [Tahmasib Shirinzadeh](https://github.com/shirinzadeh)
 
 **Demo:** (https://shirinzadeh.github.io/WatchWorld-HTML-template/)  
